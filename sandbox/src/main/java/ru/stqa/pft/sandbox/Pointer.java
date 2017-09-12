@@ -13,9 +13,7 @@ public class Pointer {
 
   public static void main(String[] args) {
 
-    Pointer pa = new Pointer(2, 3);
-    Pointer pb = new Pointer(6, 6);
-    System.out.println("Расстоняние между точками " + pa + " " + pb + " = " + distance(pa, pb));
+
   }
 
   public static double distance(Pointer p1, Pointer p2) {
