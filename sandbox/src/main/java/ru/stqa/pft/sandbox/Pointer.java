@@ -1,12 +1,13 @@
 package ru.stqa.pft.sandbox;
-import java.awt.*;
+
 public class Pointer {
 
 
-  Pointer(double x, double y){
+  Pointer(double x, double y) {
     this.x = x;
     this.y = y;
   }
+
   public double x;
   public double y;
 
@@ -14,7 +15,8 @@ public class Pointer {
 
     Pointer pa = new Pointer(2, 3);
     Pointer pb = new Pointer(6, 6);
-    System.out.println("Расстоняние между точками " + pa + " " + pb + " = " + distance(pa, pb));}
+    System.out.println("Расстоняние между точками " + pa + " " + pb + " = " + distance(pa, pb));
+  }
 
   public static double distance(Pointer p1, Pointer p2) {
     double x = p1.x - p2.x;
