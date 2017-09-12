@@ -7,23 +7,19 @@ public class MyFirstProgram {
     Square s = new Square(12);
 
     System.out.println("Hello," + " TESTERS !");
-    System.out.println("Площадь квадрата со стороной " + s.l + " = " + square(s));
+    System.out.println("Площадь квадрата со стороной " + s.l + " = " + s.square());
     Rectangle r = new Rectangle(5, 6);
 
-    System.out.println("Площадь прямоугольника со сторонами " + r.a + " " + r.b + " = " + rec(r));
+    System.out.println("Площадь прямоугольника со сторонами " + r.a + " " + r.b + " = " + r.rec());
   }
 
   public static void hello(String smb) {
     System.out.println("Hello, " + smb + "!");
   }
 
-  public static double square(Square s) {
-    return s.l * s.l;
-  }
 
-  public static double rec(Rectangle r) {
-    return r.a * r.b;
-  }
+
+
 
 
 }

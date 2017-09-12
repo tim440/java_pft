@@ -8,6 +8,9 @@ public class Rectangle {
     this.a = a;
     this.b = b;
   }
+  public double rec() {
+    return this.a * this.b;
+  }
 
-  ;
+
 }
