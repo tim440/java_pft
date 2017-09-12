@@ -11,10 +11,6 @@ public class Pointer {
   public double x;
   public double y;
 
-  public static void main(String[] args) {
-
-
-  }
 
   public static double distance(Pointer p1, Pointer p2) {
     double x = p1.x - p2.x;
