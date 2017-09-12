@@ -1,5 +1,5 @@
 package ru.stqa.pft.sandbox;
-
+import java.awt.*;
 public class Pointer {
 
 
@@ -13,7 +13,7 @@ public class Pointer {
   public static void main(String[] args) {
 
     Pointer pa = new Pointer(2, 3);
-    Pointer pb = new Pointer(5, 3);
+    Pointer pb = new Pointer(6, 6);
     System.out.println("Расстоняние между точками " + pa + " " + pb + " = " + distance(pa, pb));}
 
   public static double distance(Pointer p1, Pointer p2) {
@@ -22,4 +22,11 @@ public class Pointer {
     return Math.sqrt(x * x + y * y);
   }
 
+  @Override
+  public String toString() {
+    return "Pointer{" +
+            "x=" + x +
+            ", y=" + y +
+            '}';
+  }
 }
