@@ -12,9 +12,9 @@ public class MyFirstProgram {
     Rectangle r = new Rectangle(5, 6);
     System.out.println("Площадь прямоугольника со сторонами " + r.a + " " + r.b + " = " + r.rec());
 
-    Pointer pa = new Pointer(2, 3);
-    Pointer pb = new Pointer(6, 6);
-    System.out.println("Расстоняние между точками " + pa + " " + pb + " = " + Pointer.distance(pa, pb));
+    Point pa = new Point(2, 3);
+    Point pb = new Point(6, 6);
+    System.out.println("Расстоняние между точками " + pa + " " + pb + " = " + Point.distance(pa, pb));
   }
 
   public static void hello(String smb) {
