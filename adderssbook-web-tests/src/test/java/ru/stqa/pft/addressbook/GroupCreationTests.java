@@ -3,8 +3,6 @@ package ru.stqa.pft.addressbook;
 
 import org.testng.annotations.Test;
 
-import java.util.concurrent.TimeUnit;
-
 public class GroupCreationTests extends TestBase {
 
   @Test
@@ -14,7 +12,7 @@ public class GroupCreationTests extends TestBase {
     initGroupCreation();
     fillGroupForm(new GroupData("test1", "test2", "test3"));
     submitGroupGreatoin();
-    returnToGroupPage();
+    gotoHomePage();
   }
 
 }

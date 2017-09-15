@@ -8,7 +8,7 @@ public class GroupContact {
   private final String EMail;
 
   public GroupContact(String Name, String MName, String LName, String phone, String EMail) {
-    name = Name;
+   this.name = Name;
     this.MName = MName;
     this.LName = LName;
     this.phone = phone;

@@ -13,7 +13,7 @@ public class GroupDelitionTest extends TestBase {
 
     selectGroup();
     deleteSelectedGroups();
-    returnToGroupPage();
+    gotoHomePage();
   }
 
 }
