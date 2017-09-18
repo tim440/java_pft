@@ -10,10 +10,10 @@ public class ContactCreationTests extends TestBase {
 
   @Test
   public void testContactCreation() {
-    app.initNewContact();
-    app.fillNewContact(new GroupContact("testName", "testMName", "testLName", "89200000000", "testmail@mail.mail"));
-    app.saveContact();
-    app.gotoHomePage();
+    app.getContactHelper().initNewContact();
+    app.getContactHelper().fillNewContact(new GroupContact("testName", "testMName", "testLName", "89200000000", "testmail@mail.mail"));
+    app.getContactHelper().saveContact();
+    app.getNavigstionHelper().gotoHomePage();
   }
 
 }
