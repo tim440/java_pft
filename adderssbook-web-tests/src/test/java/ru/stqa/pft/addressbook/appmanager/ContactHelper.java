@@ -12,7 +12,7 @@ public class ContactHelper extends HelperBase {
   }
 
   public void saveContact() {
-    click(By.xpath("//div[@id='content']/form/input[21]"));
+    click(By.name("submit"));
   }
 
   public void fillNewContact(ContactData contactData) {
@@ -47,5 +47,13 @@ public class ContactHelper extends HelperBase {
     } catch (NoAlertPresentException e) {
       return false;
     }
+  }
+
+  public void initContactModification() {
+    click(By.xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img"));
+  }
+
+  public void updateContactDate() {
+    click(By.name("update"));
   }
 }
