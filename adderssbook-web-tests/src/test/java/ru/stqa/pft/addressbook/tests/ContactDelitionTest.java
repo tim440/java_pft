@@ -32,7 +32,21 @@ public class ContactDelitionTest {
 
     wd.findElement(By.name("selected[]")).click();
     wd.findElement(By.xpath("//div[@id='content']/form[2]/div[2]/input")).click();
+    //int count = 0;
+    //while (!pushOkConfirmPresent(wd)) {
+    //if (count++ < 1) throw new NoAlertPresentException("Окно подтверждения не найдено. Время истекло");
+    //};
+    pushOkConfirmPresent(wd);
     wd.findElement(By.linkText("home")).click();
+  }
+
+  public static boolean pushOkConfirmPresent(FirefoxDriver wd) {
+    try {
+      wd.switchTo().alert().accept();
+      return true;
+    } catch (NoAlertPresentException e) {
+      return false;
+    }
   }
 
   @AfterMethod
@@ -48,4 +62,6 @@ public class ContactDelitionTest {
       return false;
     }
   }
+
+
 }
