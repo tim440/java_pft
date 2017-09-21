@@ -11,7 +11,6 @@ public class GroupDelitionTest extends TestBase {
   @Test
   public void GroupDelitionTest() {
     app.getNavigstionHelper().gotoGroupPage();
-
     app.getGroupHelper().selectGroup();
     app.getGroupHelper().deleteSelectedGroups();
     app.getNavigstionHelper().gotoHomePage();

@@ -1,49 +1,59 @@
 package ru.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import ru.stqa.pft.addressbook.model.ContactData;
 
-public class ContactHelper {
-  FirefoxDriver wd;
+public class ContactHelper extends HelperBase {
+
   public ContactHelper(FirefoxDriver wd) {
-    this.wd=wd;
+    super(wd);
   }
 
   public void saveContact() {
-    wd.findElement(By.xpath("//div[@id='content']/form/input[21]")).click();
+    click(By.name("submit"));
   }
 
   public void fillNewContact(ContactData contactData) {
-    wd.findElement(By.name("firstname")).click();
-    wd.findElement(By.name("firstname")).clear();
-    wd.findElement(By.name("firstname")).sendKeys("test");
-    wd.findElement(By.name("firstname")).click();
-    wd.findElement(By.name("firstname")).clear();
-    wd.findElement(By.name("firstname")).sendKeys(contactData.getName());
-    wd.findElement(By.name("middlename")).click();
-    wd.findElement(By.name("middlename")).clear();
-    wd.findElement(By.name("middlename")).sendKeys("test");
-    wd.findElement(By.name("middlename")).click();
-    wd.findElement(By.name("middlename")).clear();
-    wd.findElement(By.name("middlename")).sendKeys(contactData.getMName());
-    wd.findElement(By.name("lastname")).click();
-    wd.findElement(By.name("lastname")).clear();
-    wd.findElement(By.name("lastname")).sendKeys("test");
-    wd.findElement(By.name("lastname")).click();
-    wd.findElement(By.name("lastname")).clear();
-    wd.findElement(By.name("lastname")).sendKeys(contactData.getLName());
-    wd.findElement(By.name("mobile")).click();
-    wd.findElement(By.name("home")).click();
-    wd.findElement(By.name("home")).click();
-    wd.findElement(By.name("home")).clear();
-    wd.findElement(By.name("home")).sendKeys(contactData.getPhone());
-    wd.findElement(By.name("email")).click();
-    wd.findElement(By.name("email")).clear();
-    wd.findElement(By.name("email")).sendKeys(contactData.getEMail());
+    type(By.name("firstname"), contactData.getName());
+    type(By.name("middlename"), contactData.getMName());
+    type(By.name("lastname"), contactData.getLName());
+    type(By.name("home"), contactData.getPhone());
+    type(By.name("email"), contactData.getEMail());
+
   }
 
   public void initNewContact() {
-    wd.findElement(By.linkText("add new")).click();
+    click(By.linkText("add new"));
+  }
+  public void deleteContact() {
+    click(By.xpath("//div[@id='content']/form[2]/div[2]/input"));
+    //int count = 0;
+    //while (!pushOkConfirmPresent(wd)) {
+    //if (count++ < 1) throw new NoAlertPresentException("Окно подтверждения не найдено. Время истекло");
+    //};
+    pushOkConfirmPresent(wd);
+  }
+
+  public void selectContactCheckbox() {
+    click(By.name("selected[]"));
+  }
+
+  public static boolean pushOkConfirmPresent(FirefoxDriver wd) {
+    try {
+      wd.switchTo().alert().accept();
+      return true;
+    } catch (NoAlertPresentException e) {
+      return false;
+    }
+  }
+
+  public void initContactModification() {
+    click(By.xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img"));
+  }
+
+  public void updateContactDate() {
+    click(By.name("update"));
   }
 }
