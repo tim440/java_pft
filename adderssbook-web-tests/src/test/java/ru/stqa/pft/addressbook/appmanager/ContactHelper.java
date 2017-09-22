@@ -2,12 +2,13 @@ package ru.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import ru.stqa.pft.addressbook.model.ContactData;
 
 public class ContactHelper extends HelperBase {
 
-  public ContactHelper(FirefoxDriver wd) {
+  public ContactHelper(WebDriver wd) {
     super(wd);
   }
 
@@ -40,7 +41,7 @@ public class ContactHelper extends HelperBase {
     click(By.name("selected[]"));
   }
 
-  public static boolean pushOkConfirmPresent(FirefoxDriver wd) {
+  public static boolean pushOkConfirmPresent(WebDriver wd) {
     try {
       wd.switchTo().alert().accept();
       return true;
