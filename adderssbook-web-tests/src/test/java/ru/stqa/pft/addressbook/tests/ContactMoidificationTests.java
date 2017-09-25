@@ -10,7 +10,7 @@ public class ContactMoidificationTests extends TestBase {
     app.getNavigationHelper().gotoHomePage();
     app.getContactHelper().selectContactCheckbox();
     app.getContactHelper().initContactModification();
-    app.getContactHelper().fillNewContact(new ContactData("testName", "testMName", "testLName", "89200000000", "testmail@mail.mail"));
+    app.getContactHelper().fillContactForm(new ContactData("testName", "testMName", "testLName", "89200000000", "testmail@mail.mail",null),false);
     app.getContactHelper().updateContactDate();
 
   }
