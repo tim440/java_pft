@@ -8,6 +8,9 @@ public class ContactMoidificationTests extends TestBase {
   @Test
   public void contactModificationTest() {
     app.getNavigationHelper().gotoHomePage();
+    if (! app.getContactHelper().isThereAContact()){
+      app.getContactHelper().createContact(new ContactData("testName", "testMName", "testLName", "89200000000", "testmail@mail.mail","test1"), true);
+    }
     app.getContactHelper().selectContactCheckbox();
     app.getContactHelper().initContactModification();
     app.getContactHelper().fillContactForm(new ContactData("testName", "testMName", "testLName", "89200000000", "testmail@mail.mail",null),false);
