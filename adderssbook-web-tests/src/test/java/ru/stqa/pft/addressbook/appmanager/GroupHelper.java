@@ -2,17 +2,14 @@ package ru.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import ru.stqa.pft.addressbook.model.GroupData;
 
 public class GroupHelper extends HelperBase {
-
-
   public GroupHelper(WebDriver wd) {
     super(wd);
   }
 
-  public void submitGroupGreatoin() {
+  public void submitGroupGreation() {
     click(By.name("submit"));
   }
 
@@ -51,7 +48,7 @@ public class GroupHelper extends HelperBase {
   public void createGroup(GroupData group) {
     initGroupCreation();
     fillGroupForm(group);
-    submitGroupGreatoin();
+    submitGroupGreation();
     returnToGroupPage();
   }
 

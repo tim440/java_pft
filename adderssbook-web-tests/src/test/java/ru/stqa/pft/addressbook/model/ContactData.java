@@ -9,7 +9,7 @@ public class ContactData {
   private String group;
 
   public ContactData(String Name, String MName, String LName, String phone, String EMail, String group) {
-   this.name = Name;
+    this.name = Name;
     this.MName = MName;
     this.LName = LName;
     this.phone = phone;

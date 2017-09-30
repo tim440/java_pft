@@ -5,7 +5,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.BrowserType;
-import sun.plugin.dom.exception.BrowserNotSupportedException;
 
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
@@ -14,7 +13,7 @@ public class ApplicationManager {
   private ContactHelper contactHelper;
   private SessionHelper sessionHelper;
   private NavigationHelper navigationHelper;
-  private GroupHelper groupHelper ;
+  private GroupHelper groupHelper;
   WebDriver wd;
   private String browser;
 
@@ -25,14 +24,13 @@ public class ApplicationManager {
 
   public void init() {
 
-    if (Objects.equals(browser, BrowserType.FIREFOX)){
+    if (Objects.equals(browser, BrowserType.FIREFOX)) {
       wd = new FirefoxDriver();
-    }else if (Objects.equals(browser, BrowserType.CHROME)){
+    } else if (Objects.equals(browser, BrowserType.CHROME)) {
       wd = new ChromeDriver();
-    }else if (Objects.equals(browser, BrowserType.IE)){
+    } else if (Objects.equals(browser, BrowserType.IE)) {
       wd = new InternetExplorerDriver();
     }
-    //wd = new FirefoxDriver();
     wd.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
     wd.get("http://localhost/addressbook/group.php");
     sessionHelper = new SessionHelper(wd);
@@ -41,8 +39,6 @@ public class ApplicationManager {
     navigationHelper = new NavigationHelper(wd);
     sessionHelper.login("admin", "secret");
   }
-
-
   public void stop() {
     wd.quit();
   }
