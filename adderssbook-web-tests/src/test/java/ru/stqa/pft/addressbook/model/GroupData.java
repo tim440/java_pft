@@ -14,15 +14,15 @@ public class GroupData {
   }
 
   public GroupData(String name, String header, String footer) {
-    this.id = Integer.MAX_VALUE;
+    // this.id = id;
     this.name = name;
     this.header = header;
     this.footer = footer;
   }
 
-  public void setId(int id) {
-    this.id = id;
-  }
+  // public void setId(int id) {
+  //   this.id = id;
+  // }
 
   public int getId() {
     return id;

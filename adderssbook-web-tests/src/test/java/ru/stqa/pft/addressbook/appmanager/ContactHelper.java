@@ -4,8 +4,14 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import ru.stqa.pft.addressbook.model.ContactData;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.openqa.selenium.By.xpath;
 
 public class ContactHelper extends HelperBase {
 
@@ -35,7 +41,7 @@ public class ContactHelper extends HelperBase {
     click(By.linkText("add new"));
   }
   public void deleteContact() {
-    click(By.xpath("//div[@id='content']/form[2]/div[2]/input"));
+    click(xpath("//div[@id='content']/form[2]/div[2]/input"));
     //int count = 0;
     //while (!pushOkConfirmPresent(wd)) {
     //if (count++ < 1) throw new NoAlertPresentException("Окно подтверждения не найдено. Время истекло");
@@ -43,8 +49,9 @@ public class ContactHelper extends HelperBase {
     pushOkConfirmPresent(wd);
   }
 
-  public void selectContactCheckbox() {
-    click(By.name("selected[]"));
+  public void selectContactCheckbox(int index) {
+    wd.findElements(By.name("selected[]")).get(index).click();
+    //click(By.name("selected[]"));
   }
 
   public static boolean pushOkConfirmPresent(WebDriver wd) {
@@ -57,7 +64,7 @@ public class ContactHelper extends HelperBase {
   }
 
   public void initContactModification() {
-    click(By.xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img"));
+    click(xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img"));
   }
 
   public void updateContactDate() {
@@ -73,4 +80,19 @@ public class ContactHelper extends HelperBase {
     fillContactForm(contactData, groupPresent);
     saveContact();
   }
+
+  public List<ContactData> getContactList() {
+
+    List<ContactData> contacts = new ArrayList<ContactData>();
+    List<WebElement> elements = wd.findElements(By.name("entry"));
+    for (WebElement element : elements) {
+
+      int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("id"));
+      String name = wd.findElement(By.xpath("//div/div[4]/form[2]/table/tbody/tr/td[3]")).getText();
+      String LName = wd.findElement(By.xpath("//div/div[4]/form[2]/table/tbody/tr/td[2]")).getText();
+      ContactData contact = new ContactData(id, name, null, LName, null, null, null);
+      contacts.add(contact);
+    }
+    return contacts;
+    }
 }

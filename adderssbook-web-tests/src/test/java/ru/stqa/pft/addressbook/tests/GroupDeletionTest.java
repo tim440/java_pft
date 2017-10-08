@@ -11,7 +11,7 @@ public class GroupDeletionTest extends TestBase {
   @Test
   public void GroupDelitionTest() {
 
-    int n = 5; // Количество удаляемых групп
+    int n = 3; // Количество удаляемых групп
     for (int i = 1; i <= n; i++) {
       app.getNavigationHelper().gotoGroupPage();
 

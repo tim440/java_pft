@@ -12,7 +12,7 @@ import java.util.List;
 public class GroupCreationTests extends TestBase {
   @Test
   public void testGroupCreation() {
-    int n = 3; // Количество создаваемых групп
+    int n = 1; // Количество создаваемых групп
     for (int i = 1; i <= n; i++) {
 
       app.getNavigationHelper().gotoGroupPage();
