@@ -11,14 +11,14 @@ public class ContactDeletionTest extends TestBase {
   public void contactDelitionTest() {
     int n = 1; // Количество удаляемых контактов
     for (int i = 1; i <= n; i++) {
-      app.getNavigationHelper().gotoHomePage();
+      app.goTo().gotoHomePage();
       if (!app.getContactHelper().isThereAContact()) {
         app.getContactHelper().createContact(new ContactData("testName", "testMName", "testLName", "89200000000", "testmail@mail.mail", "test1"), true);
       }
       List<ContactData> before = app.getContactHelper().getContactList();
       app.getContactHelper().selectContactCheckbox(before.size() - 1);
       app.getContactHelper().deleteContact();
-      app.getNavigationHelper().gotoHomePage();
+      app.goTo().gotoHomePage();
       List<ContactData> after = app.getContactHelper().getContactList();
       Assert.assertEquals(after.size(), before.size() - 1);
 

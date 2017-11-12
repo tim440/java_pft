@@ -13,13 +13,13 @@ public class ContactCreationTests extends TestBase {
   public void testContactCreation() {
     int n = 1; // Количество создаваемых контактов
     for (int i = 1; i <= n; i++) {
-      app.getNavigationHelper().gotoHomePage();
+      app.goTo().gotoHomePage();
       List<ContactData> before = app.getContactHelper().getContactList();
       app.getContactHelper().initNewContact();
       ContactData contact = new ContactData("testName", "testMName", "testLName", "89200000000", "testmail@mail.mail", "test1");
       app.getContactHelper().fillContactForm(contact, true);
       app.getContactHelper().saveContact();
-      app.getNavigationHelper().gotoHomePage();
+      app.goTo().gotoHomePage();
       List<ContactData> after = app.getContactHelper().getContactList();
       Assert.assertEquals(after.size(), before.size() + 1);
 

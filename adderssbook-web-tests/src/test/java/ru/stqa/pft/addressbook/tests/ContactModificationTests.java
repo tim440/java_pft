@@ -10,7 +10,7 @@ import java.util.List;
 public class ContactModificationTests extends TestBase {
   @Test
   public void contactModificationTest() {
-    app.getNavigationHelper().gotoHomePage();
+    app.goTo().gotoHomePage();
     if (!app.getContactHelper().isThereAContact()) {
       app.getContactHelper().createContact(new ContactData("testName", "testMName", "testLName", "89200000000", "testmail@mail.mail", "test1"), true);
     }
@@ -20,7 +20,7 @@ public class ContactModificationTests extends TestBase {
     ContactData contact = new ContactData(before.get(before.size() - 1).getId(), "testName", "testMName", "testLName", "89200000000", "testmail@mail.mail", null);
     app.getContactHelper().fillContactForm(contact, false);
     app.getContactHelper().updateContactDate();
-    app.getNavigationHelper().gotoHomePage();
+    app.goTo().gotoHomePage();
     List<ContactData> after = app.getContactHelper().getContactList();
 
     Assert.assertEquals(after.size(), before.size());
