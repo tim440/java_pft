@@ -1,53 +1,89 @@
 package ru.stqa.pft.addressbook.model;
 
 public class ContactData {
-  private final String name;
-  private final String MName;
-  private final String LName;
-  private final String phone;
-  private final String EMail;
-  private int id;
+
+  private String MName;
+  private String homePhone;
+  private String EMail;
+  private int id = Integer.MAX_VALUE;
   private String group;
+  private String lastname;
+  private String firstname;
+  //private String homePhone;
+  private String mobilePhone;
+  private String workPhone;
+  private String allPhones;
+
+  public String getAllPhones() {
+    return allPhones;
+  }
+
+  public ContactData withAllPhones(String allPhones) {
+    this.allPhones = allPhones;
+    return this;
+  }
+
+  public ContactData() {
+
+  }
 
 
-  public ContactData(String Name, String MName, String LName, String phone, String EMail, String group) {
-    this.name = Name;
+  public String getMobilePhone() {
+    return mobilePhone;
+  }
+
+  public String getWorkPhone() {
+    return workPhone;
+  }
+
+  public ContactData(String firstname, String MName, String lastname, String homePhone, String EMail, String group) {
+    this.firstname = firstname;
     this.MName = MName;
-    this.LName = LName;
-    this.phone = phone;
+    this.lastname = lastname;
+    this.homePhone = homePhone;
     this.EMail = EMail;
-
     this.group = group;
   }
 
-  public ContactData(int id, String Name, String MName, String LName, String phone, String EMail, String group) {
+  public ContactData(int id, String firstname, String MName, String lastname, String homePhone, String EMail, String group) {
     this.id = id;
-    this.name = Name;
+    this.firstname = firstname;
     this.MName = MName;
-    this.LName = LName;
-    this.phone = phone;
+    this.lastname = lastname;
+    this.homePhone = homePhone;
     this.EMail = EMail;
     this.group = group;
+  }
+
+
+
+  public ContactData(int id, String lastname, String firstname, String homePhone, String mobilePhone, String workPhone) {
+    this.id = id;
+    this.lastname = lastname;
+    this.firstname = firstname;
+    this.homePhone = homePhone;
+    this.mobilePhone = mobilePhone;
+    this.workPhone = workPhone;
   }
 
   public int getId() {
     return id;
   }
 
-  public String getName() {
-    return name;
+  public String getFirstname() {
+    return firstname;
   }
 
   public String getMName() {
     return MName;
   }
 
-  public String getLName() {
-    return LName;
+  public String getLastname() {
+    return lastname;
   }
 
-  public String getPhone() {
-    return phone;
+  public String getHomePhone() {
+    return homePhone;
   }
 
   public String getEMail() {
@@ -61,8 +97,8 @@ public class ContactData {
   @Override
   public String toString() {
     return "ContactData{" +
-            "name='" + name + '\'' +
-            ", LName='" + LName + '\'' +
+            "firstname='" + firstname + '\'' +
+            ", lastname='" + lastname + '\'' +
             ", id=" + id +
             '}';
   }
@@ -74,13 +110,42 @@ public class ContactData {
 
     ContactData that = (ContactData) o;
 
-    return name != null ? name.equals(that.name) : that.name == null;
+    return firstname != null ? firstname.equals(that.firstname) : that.firstname == null;
   }
 
   @Override
   public int hashCode() {
-    return name != null ? name.hashCode() : 0;
+    return firstname != null ? firstname.hashCode() : 0;
   }
 
 
+  public ContactData withId(int id) {
+    this.id = id;
+    return this;
+  }
+
+  public ContactData withFirstname(String firstname) {
+    this.firstname = firstname;
+    return this;
+  }
+
+  public ContactData withLastname(String lastname) {
+    this.lastname = lastname;
+    return this;
+  }
+
+  public ContactData withHomePhone(String home) {
+    this.homePhone = home;
+    return this;
+  }
+
+  public ContactData withMobilePhone(String mobile) {
+    this.mobilePhone = mobile;
+    return this;
+  }
+
+  public ContactData withWorkPhone(String work) {
+    this.workPhone = work;
+    return this;
+  }
 }
