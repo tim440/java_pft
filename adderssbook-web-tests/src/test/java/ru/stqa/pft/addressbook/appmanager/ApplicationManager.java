@@ -31,7 +31,7 @@ public class ApplicationManager {
     } else if (Objects.equals(browser, BrowserType.IE)) {
       wd = new InternetExplorerDriver();
     }
-    wd.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+    wd.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
     wd.get("http://localhost/addressbook");
     sessionHelper = new SessionHelper(wd);
     contactHelper = new ContactHelper(wd);

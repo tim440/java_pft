@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.ContactData;
 
+import java.io.File;
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
@@ -16,7 +17,8 @@ public class ContactCreationTests extends TestBase {
       app.goTo().gotoHomePage();
       List<ContactData> before = app.contact().allm();
       app.contact().initNewContact();
-      ContactData contact = new ContactData("testName" , "testMName" , "testLName" , "89200000000", "testmail@mail.mail", "test1");
+      File photo = new File("src\test\resources\11111.png");
+      ContactData contact = new ContactData().withFirstname("test1").withLastname("test2").withPhoto(photo);
       app.contact().fillContactForm(contact, true);
       app.contact().saveContact();
       app.goTo().gotoHomePage();
