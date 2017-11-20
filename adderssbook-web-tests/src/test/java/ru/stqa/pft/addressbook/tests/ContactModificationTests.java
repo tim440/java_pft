@@ -12,12 +12,12 @@ public class ContactModificationTests extends TestBase {
   public void contactModificationTest() {
     app.goTo().gotoHomePage();
     if (!app.contact().isThereAContact()) {
-      app.contact().createContact(new ContactData("testName", "testMName", "testLName", "89200000000", "testmail@mail.mail", "test1"), true);
+      app.contact().createContact(new ContactData().withFirstname("test1").withLastname("test2").withGroup("test1"), true);
     }
     List<ContactData> before = app.contact().allm();
     app.contact().selectContactCheckbox(before.size() - 1);
     app.contact().initContactModification();
-    ContactData contact = new ContactData(before.get(before.size() - 1).getId(), "testName", "testMName", "testLName", "89200000000", "testmail@mail.mail", null);
+    ContactData contact = new ContactData(before.get(before.size() - 1).getId(), "test1", "testMName", "test2", "89200000000", "testmail@mail.mail", null);
     app.contact().fillContactForm(contact, false);
     app.contact().updateContactDate();
     app.goTo().gotoHomePage();
