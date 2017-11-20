@@ -102,9 +102,7 @@ public class ContactData {
     return EMail;
   }
 
-  public String getGroup() {
-    return group;
-  }
+
 
   @Override
   public String toString() {
@@ -135,7 +133,10 @@ public class ContactData {
     this.id = id;
     return this;
   }
-
+  public ContactData withGroup(String group) {
+    this.group = group;
+    return this;
+  }
   public ContactData withFirstname(String firstname) {
     this.firstname = firstname;
     return this;
@@ -159,5 +160,9 @@ public class ContactData {
   public ContactData withWorkPhone(String work) {
     this.workPhone = work;
     return this;
+  }
+
+  public String getGroup() {
+    return group;
   }
 }

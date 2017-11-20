@@ -17,8 +17,8 @@ public class ContactCreationTests extends TestBase {
       app.goTo().gotoHomePage();
       List<ContactData> before = app.contact().allm();
       app.contact().initNewContact();
-      File photo = new File("src\test\resources\11111.png");
-      ContactData contact = new ContactData().withFirstname("test1").withLastname("test2").withPhoto(photo);
+      File photo = new File("src/test/resources/11111.jpg");
+      ContactData contact = new ContactData().withFirstname("test1").withLastname("test2").withPhoto(photo).withGroup("test1");
       app.contact().fillContactForm(contact, true);
       app.contact().saveContact();
       app.goTo().gotoHomePage();
