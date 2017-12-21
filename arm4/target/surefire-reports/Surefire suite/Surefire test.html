@@ -1,0 +1,274 @@
+<html>
+<head>
+<title>TestNG:  Surefire test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Surefire test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>39/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Dec 21 14:36:11 MSK 2017</td>
+</tr>
+<tr><td>Total time:</td><td>37 seconds (37607 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='ru.rgs.APITests.tests.agentStatement.CreateAgentStatementTests.createAgentStatementRuTest()'><b>createAgentStatementRuTest</b><br>Test class: ru.rgs.APITests.tests.agentStatement.CreateAgentStatementTests</td>
+<td></td>
+<td>2</td>
+<td>ru.rgs.APITests.tests.agentStatement.CreateAgentStatementTests@307af381</td></tr>
+<tr>
+<td title='ru.rgs.APITests.tests.agentStatement.CreateAgentStatementTests.createAgentStatementUSDTest()'><b>createAgentStatementUSDTest</b><br>Test class: ru.rgs.APITests.tests.agentStatement.CreateAgentStatementTests</td>
+<td></td>
+<td>1</td>
+<td>ru.rgs.APITests.tests.agentStatement.CreateAgentStatementTests@307af381</td></tr>
+<tr>
+<td title='ru.rgs.APITests.tests.contracts.boxed.CreateBoxedTests.createBoxedTest()'><b>createBoxedTest</b><br>Test class: ru.rgs.APITests.tests.contracts.boxed.CreateBoxedTests<br>Test method: Минимально заполненный</td>
+<td></td>
+<td>0</td>
+<td>ru.rgs.APITests.tests.contracts.boxed.CreateBoxedTests@633ddc0c</td></tr>
+<tr>
+<td title='ru.rgs.APITests.tests.contracts.dsago.CreateDsagoTests.createDsagoTest()'><b>createDsagoTest</b><br>Test class: ru.rgs.APITests.tests.contracts.dsago.CreateDsagoTests<br>Test method: Минимально заполненный</td>
+<td></td>
+<td>0</td>
+<td>ru.rgs.APITests.tests.contracts.dsago.CreateDsagoTests@1471b98d</td></tr>
+<tr>
+<td title='ru.rgs.APITests.tests.contracts.express.CreateExpressTests.createExpressTest()'><b>createExpressTest</b><br>Test class: ru.rgs.APITests.tests.contracts.express.CreateExpressTests<br>Test method: Минимально заполненный</td>
+<td></td>
+<td>0</td>
+<td>ru.rgs.APITests.tests.contracts.express.CreateExpressTests@3af236d0</td></tr>
+<tr>
+<td title='ru.rgs.APITests.tests.contracts.ob.CreateGeneralBusinessTests.createGeneralBusinessTest()'><b>createGeneralBusinessTest</b><br>Test class: ru.rgs.APITests.tests.contracts.ob.CreateGeneralBusinessTests<br>Test method: Минимально заполненный</td>
+<td></td>
+<td>0</td>
+<td>ru.rgs.APITests.tests.contracts.ob.CreateGeneralBusinessTests@7de147e9</td></tr>
+<tr>
+<td title='ru.rgs.APITests.tests.contracts.greenCard.CreateGreenCardTests.createGreenCardTest()'><b>createGreenCardTest</b><br>Test class: ru.rgs.APITests.tests.contracts.greenCard.CreateGreenCardTests<br>Test method: Минимально заполненный</td>
+<td></td>
+<td>0</td>
+<td>ru.rgs.APITests.tests.contracts.greenCard.CreateGreenCardTests@2dd0a0d0</td></tr>
+<tr>
+<td title='ru.rgs.APITests.tests.contracts.kasko.CreateKaskoTests.createKaskoTest()'><b>createKaskoTest</b><br>Test class: ru.rgs.APITests.tests.contracts.kasko.CreateKaskoTests<br>Test method: Минимально заполненный</td>
+<td></td>
+<td>0</td>
+<td>ru.rgs.APITests.tests.contracts.kasko.CreateKaskoTests@935d3f9</td></tr>
+<tr>
+<td title='ru.rgs.APITests.tests.contracts.life.CreateLifeTests.createLifeTest()'><b>createLifeTest</b><br>Test class: ru.rgs.APITests.tests.contracts.life.CreateLifeTests<br>Test method: Минимально заполненный</td>
+<td></td>
+<td>0</td>
+<td>ru.rgs.APITests.tests.contracts.life.CreateLifeTests@7f12094d</td></tr>
+<tr>
+<td title='ru.rgs.APITests.tests.contracts.osago.CreateOsagoTests.createOsagoTest()'><b>createOsagoTest</b><br>Test class: ru.rgs.APITests.tests.contracts.osago.CreateOsagoTests<br>Test method: Минимально заполненный</td>
+<td></td>
+<td>0</td>
+<td>ru.rgs.APITests.tests.contracts.osago.CreateOsagoTests@7f42b194</td></tr>
+<tr>
+<td title='ru.rgs.APITests.tests.contracts.osgopp.CreateOsgoppTests.createOsgoppTest()'><b>createOsgoppTest</b><br>Test class: ru.rgs.APITests.tests.contracts.osgopp.CreateOsgoppTests<br>Test method: Минимально заполненный</td>
+<td></td>
+<td>0</td>
+<td>ru.rgs.APITests.tests.contracts.osgopp.CreateOsgoppTests@2a8f8555</td></tr>
+<tr>
+<td title='ru.rgs.APITests.tests.contracts.osopo.CreateOsopoTests.createOsopoTest()'><b>createOsopoTest</b><br>Test class: ru.rgs.APITests.tests.contracts.osopo.CreateOsopoTests<br>Test method: Минимально заполненный</td>
+<td></td>
+<td>0</td>
+<td>ru.rgs.APITests.tests.contracts.osopo.CreateOsopoTests@23b1aa9</td></tr>
+<tr>
+<td title='ru.rgs.APITests.tests.agentStatement.RemoveAgentStatementNoDelTests.removeAgentStatementNonDelTest()'><b>removeAgentStatementNonDelTest</b><br>Test class: ru.rgs.APITests.tests.agentStatement.RemoveAgentStatementNoDelTests<br>Test method: Удаление не удаляемого ОА</td>
+<td></td>
+<td>14</td>
+<td>ru.rgs.APITests.tests.agentStatement.RemoveAgentStatementNoDelTests@1510b9a2</td></tr>
+<tr>
+<td title='ru.rgs.APITests.tests.agentStatement.RemoveAgentStatementTests.removeAgentStatementRuTest()'><b>removeAgentStatementRuTest</b><br>Test class: ru.rgs.APITests.tests.agentStatement.RemoveAgentStatementTests<br>Test method: Удаление рублевого ОА</td>
+<td></td>
+<td>1</td>
+<td>ru.rgs.APITests.tests.agentStatement.RemoveAgentStatementTests@76a6f045</td></tr>
+<tr>
+<td title='ru.rgs.APITests.tests.agentStatement.RemoveAgentStatementTests.removeAgentStatementUsdTest()'><b>removeAgentStatementUsdTest</b><br>Test class: ru.rgs.APITests.tests.agentStatement.RemoveAgentStatementTests<br>Test method: Удаление валютного ОА</td>
+<td></td>
+<td>1</td>
+<td>ru.rgs.APITests.tests.agentStatement.RemoveAgentStatementTests@76a6f045</td></tr>
+<tr>
+<td title='ru.rgs.APITests.tests.contracts.boxed.RemoveBoxedTests.removeBoxedTest()'><b>removeBoxedTest</b><br>Test class: ru.rgs.APITests.tests.contracts.boxed.RemoveBoxedTests</td>
+<td></td>
+<td>0</td>
+<td>ru.rgs.APITests.tests.contracts.boxed.RemoveBoxedTests@4bcdd11</td></tr>
+<tr>
+<td title='ru.rgs.APITests.tests.contracts.dsago.RemoveDsagoTests.removeDsagoTest()'><b>removeDsagoTest</b><br>Test class: ru.rgs.APITests.tests.contracts.dsago.RemoveDsagoTests</td>
+<td></td>
+<td>0</td>
+<td>ru.rgs.APITests.tests.contracts.dsago.RemoveDsagoTests@5514579e</td></tr>
+<tr>
+<td title='ru.rgs.APITests.tests.contracts.express.RemoveExpressTests.removeExpressTest()'><b>removeExpressTest</b><br>Test class: ru.rgs.APITests.tests.contracts.express.RemoveExpressTests</td>
+<td></td>
+<td>0</td>
+<td>ru.rgs.APITests.tests.contracts.express.RemoveExpressTests@23564dd2</td></tr>
+<tr>
+<td title='ru.rgs.APITests.tests.contracts.ob.RemoveGeneralBusinessTests.removeGeneralBusinessTest()'><b>removeGeneralBusinessTest</b><br>Test class: ru.rgs.APITests.tests.contracts.ob.RemoveGeneralBusinessTests</td>
+<td></td>
+<td>0</td>
+<td>ru.rgs.APITests.tests.contracts.ob.RemoveGeneralBusinessTests@12567179</td></tr>
+<tr>
+<td title='ru.rgs.APITests.tests.contracts.greenCard.RemoveGreenCardTests.removeGreenCardTest()'><b>removeGreenCardTest</b><br>Test class: ru.rgs.APITests.tests.contracts.greenCard.RemoveGreenCardTests</td>
+<td></td>
+<td>2</td>
+<td>ru.rgs.APITests.tests.contracts.greenCard.RemoveGreenCardTests@6bf570c</td></tr>
+<tr>
+<td title='ru.rgs.APITests.tests.contracts.kasko.RemoveKaskoTests.removeKaskoTest()'><b>removeKaskoTest</b><br>Test class: ru.rgs.APITests.tests.contracts.kasko.RemoveKaskoTests</td>
+<td></td>
+<td>0</td>
+<td>ru.rgs.APITests.tests.contracts.kasko.RemoveKaskoTests@214b342f</td></tr>
+<tr>
+<td title='ru.rgs.APITests.tests.contracts.life.RemoveLifeTests.removeLifeTest()'><b>removeLifeTest</b><br>Test class: ru.rgs.APITests.tests.contracts.life.RemoveLifeTests</td>
+<td></td>
+<td>0</td>
+<td>ru.rgs.APITests.tests.contracts.life.RemoveLifeTests@589fb74d</td></tr>
+<tr>
+<td title='ru.rgs.APITests.tests.contracts.osago.RemoveOsagoTests.removeOsagoTest()'><b>removeOsagoTest</b><br>Test class: ru.rgs.APITests.tests.contracts.osago.RemoveOsagoTests</td>
+<td></td>
+<td>0</td>
+<td>ru.rgs.APITests.tests.contracts.osago.RemoveOsagoTests@8eb6f9a</td></tr>
+<tr>
+<td title='ru.rgs.APITests.tests.contracts.osgopp.RemoveOsgoppTests.removeOsgoppTest()'><b>removeOsgoppTest</b><br>Test class: ru.rgs.APITests.tests.contracts.osgopp.RemoveOsgoppTests</td>
+<td></td>
+<td>0</td>
+<td>ru.rgs.APITests.tests.contracts.osgopp.RemoveOsgoppTests@402b4f81</td></tr>
+<tr>
+<td title='ru.rgs.APITests.tests.contracts.osopo.RemoveOsopoTests.removeOsopoTest()'><b>removeOsopoTest</b><br>Test class: ru.rgs.APITests.tests.contracts.osopo.RemoveOsopoTests</td>
+<td></td>
+<td>0</td>
+<td>ru.rgs.APITests.tests.contracts.osopo.RemoveOsopoTests@54489296</td></tr>
+<tr>
+<td title='ru.rgs.APITests.tests.search.SearchAgentStatementTests.searchAgentStatementTest()'><b>searchAgentStatementTest</b><br>Test class: ru.rgs.APITests.tests.search.SearchAgentStatementTests<br>Test method: По номеру рублевого ОА и подразделению</td>
+<td></td>
+<td>0</td>
+<td>ru.rgs.APITests.tests.search.SearchAgentStatementTests@267ff4df</td></tr>
+<tr>
+<td title='ru.rgs.APITests.tests.search.SearchAgentTests.searchAgentTest()'><b>searchAgentTest</b><br>Test class: ru.rgs.APITests.tests.search.SearchAgentTests</td>
+<td></td>
+<td>0</td>
+<td>ru.rgs.APITests.tests.search.SearchAgentTests@7c4b5ceb</td></tr>
+<tr>
+<td title='ru.rgs.APITests.tests.search.SearchContractTests.searchContractTest()'><b>searchContractTest</b><br>Test class: ru.rgs.APITests.tests.search.SearchContractTests<br>Test method: По серии и номеру</td>
+<td></td>
+<td>0</td>
+<td>ru.rgs.APITests.tests.search.SearchContractTests@6c07add6</td></tr>
+<tr>
+<td title='ru.rgs.APITests.tests.search.SearchPersonTests.searchPersonTest()'><b>searchPersonTest</b><br>Test class: ru.rgs.APITests.tests.search.SearchPersonTests<br>Test method: По типу и ФИО</td>
+<td></td>
+<td>0</td>
+<td>ru.rgs.APITests.tests.search.SearchPersonTests@e26a3df</td></tr>
+<tr>
+<td title='ru.rgs.APITests.tests.search.SearchVehicleTests.searchVehicle()'><b>searchVehicle</b><br>Test class: ru.rgs.APITests.tests.search.SearchVehicleTests<br>Test method: По владельцу и марке</td>
+<td></td>
+<td>0</td>
+<td>ru.rgs.APITests.tests.search.SearchVehicleTests@57a667c8</td></tr>
+<tr>
+<td title='ru.rgs.APITests.tests.contracts.dsago.TerminationDsagoTests.terminationDsagoTest()'><b>terminationDsagoTest</b><br>Test class: ru.rgs.APITests.tests.contracts.dsago.TerminationDsagoTests<br>Test method: На текущую дату</td>
+<td></td>
+<td>0</td>
+<td>ru.rgs.APITests.tests.contracts.dsago.TerminationDsagoTests@58c42c8c</td></tr>
+<tr>
+<td title='ru.rgs.APITests.tests.contracts.express.TerminationExpressTests.terminationExpressTest()'><b>terminationExpressTest</b><br>Test class: ru.rgs.APITests.tests.contracts.express.TerminationExpressTests<br>Test method: На текущую дату</td>
+<td></td>
+<td>0</td>
+<td>ru.rgs.APITests.tests.contracts.express.TerminationExpressTests@54895681</td></tr>
+<tr>
+<td title='ru.rgs.APITests.tests.contracts.ob.TerminationGeneralBusinessTests.terminationGeneralBusinessTest()'><b>terminationGeneralBusinessTest</b><br>Test class: ru.rgs.APITests.tests.contracts.ob.TerminationGeneralBusinessTests</td>
+<td></td>
+<td>0</td>
+<td>ru.rgs.APITests.tests.contracts.ob.TerminationGeneralBusinessTests@37d699a1</td></tr>
+<tr>
+<td title='ru.rgs.APITests.tests.contracts.greenCard.TerminationGreenCardTests.terminationGreenCardTest()'><b>terminationGreenCardTest</b><br>Test class: ru.rgs.APITests.tests.contracts.greenCard.TerminationGreenCardTests<br>Test method: На текущую дату</td>
+<td></td>
+<td>0</td>
+<td>ru.rgs.APITests.tests.contracts.greenCard.TerminationGreenCardTests@1796b2d4</td></tr>
+<tr>
+<td title='ru.rgs.APITests.tests.contracts.kasko.TerminationKaskoTests.terminationKaskoTest()'><b>terminationKaskoTest</b><br>Test class: ru.rgs.APITests.tests.contracts.kasko.TerminationKaskoTests<br>Test method: На текущую дату</td>
+<td></td>
+<td>0</td>
+<td>ru.rgs.APITests.tests.contracts.kasko.TerminationKaskoTests@5db0003d</td></tr>
+<tr>
+<td title='ru.rgs.APITests.tests.contracts.life.TerminationLifeTests.terminationLifeTest()'><b>terminationLifeTest</b><br>Test class: ru.rgs.APITests.tests.contracts.life.TerminationLifeTests<br>Test method: На текущую дату</td>
+<td></td>
+<td>0</td>
+<td>ru.rgs.APITests.tests.contracts.life.TerminationLifeTests@200d1a3d</td></tr>
+<tr>
+<td title='ru.rgs.APITests.tests.contracts.osago.TerminationOsagoTests.terminationOsagoTest()'><b>terminationOsagoTest</b><br>Test class: ru.rgs.APITests.tests.contracts.osago.TerminationOsagoTests</td>
+<td></td>
+<td>0</td>
+<td>ru.rgs.APITests.tests.contracts.osago.TerminationOsagoTests@29170a47</td></tr>
+<tr>
+<td title='ru.rgs.APITests.tests.contracts.osgopp.TerminationOsgoppTests.terminationOsgoppTest()'><b>terminationOsgoppTest</b><br>Test class: ru.rgs.APITests.tests.contracts.osgopp.TerminationOsgoppTests<br>Test method: На текущую дату</td>
+<td></td>
+<td>0</td>
+<td>ru.rgs.APITests.tests.contracts.osgopp.TerminationOsgoppTests@13ef7fa1</td></tr>
+<tr>
+<td title='ru.rgs.APITests.tests.contracts.osopo.TerminationOsopoTests.terminationOsopoTest()'><b>terminationOsopoTest</b><br>Test class: ru.rgs.APITests.tests.contracts.osopo.TerminationOsopoTests<br>Test method: На текущую дату</td>
+<td></td>
+<td>0</td>
+<td>ru.rgs.APITests.tests.contracts.osopo.TerminationOsopoTests@4e8598d9</td></tr>
+</table><p>
+</body>
+</html>

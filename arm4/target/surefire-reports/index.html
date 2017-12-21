@@ -1,0 +1,1785 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Surefire_suite">
+              <span class="suite-name border-passed">Surefire suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Surefire_suite">
+                    <span>[unset file name]</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Surefire_suite">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Surefire_suite">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Surefire_suite">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Surefire_suite">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Surefire_suite">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Surefire_suite">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">39 methods,   39 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods passed suite-Surefire_suite"> (hide)</a> <!-- hide-methods passed suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods passed suite-Surefire_suite"> (show)</a> <!-- show-methods passed suite-Surefire_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Surefire_suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.agentStatement.CreateAgentStatementTests" hash-for-method="createAgentStatementRuTest">createAgentStatementRuTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.agentStatement.CreateAgentStatementTests" hash-for-method="createAgentStatementUSDTest">createAgentStatementUSDTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.contracts.boxed.CreateBoxedTests" hash-for-method="createBoxedTest">createBoxedTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.contracts.dsago.CreateDsagoTests" hash-for-method="createDsagoTest">createDsagoTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.contracts.express.CreateExpressTests" hash-for-method="createExpressTest">createExpressTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.contracts.ob.CreateGeneralBusinessTests" hash-for-method="createGeneralBusinessTest">createGeneralBusinessTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.contracts.greenCard.CreateGreenCardTests" hash-for-method="createGreenCardTest">createGreenCardTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.contracts.kasko.CreateKaskoTests" hash-for-method="createKaskoTest">createKaskoTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.contracts.life.CreateLifeTests" hash-for-method="createLifeTest">createLifeTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.contracts.osago.CreateOsagoTests" hash-for-method="createOsagoTest">createOsagoTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.contracts.osgopp.CreateOsgoppTests" hash-for-method="createOsgoppTest">createOsgoppTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.contracts.osopo.CreateOsopoTests" hash-for-method="createOsopoTest">createOsopoTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.agentStatement.RemoveAgentStatementNoDelTests" hash-for-method="removeAgentStatementNonDelTest">removeAgentStatementNonDelTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.agentStatement.RemoveAgentStatementTests" hash-for-method="removeAgentStatementRuTest">removeAgentStatementRuTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.agentStatement.RemoveAgentStatementTests" hash-for-method="removeAgentStatementUsdTest">removeAgentStatementUsdTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.contracts.boxed.RemoveBoxedTests" hash-for-method="removeBoxedTest">removeBoxedTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.contracts.dsago.RemoveDsagoTests" hash-for-method="removeDsagoTest">removeDsagoTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.contracts.express.RemoveExpressTests" hash-for-method="removeExpressTest">removeExpressTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.contracts.ob.RemoveGeneralBusinessTests" hash-for-method="removeGeneralBusinessTest">removeGeneralBusinessTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.contracts.greenCard.RemoveGreenCardTests" hash-for-method="removeGreenCardTest">removeGreenCardTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.contracts.kasko.RemoveKaskoTests" hash-for-method="removeKaskoTest">removeKaskoTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.contracts.life.RemoveLifeTests" hash-for-method="removeLifeTest">removeLifeTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.contracts.osago.RemoveOsagoTests" hash-for-method="removeOsagoTest">removeOsagoTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.contracts.osgopp.RemoveOsgoppTests" hash-for-method="removeOsgoppTest">removeOsgoppTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.contracts.osopo.RemoveOsopoTests" hash-for-method="removeOsopoTest">removeOsopoTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.search.SearchAgentStatementTests" hash-for-method="searchAgentStatementTest">searchAgentStatementTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.search.SearchAgentTests" hash-for-method="searchAgentTest">searchAgentTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.search.SearchContractTests" hash-for-method="searchContractTest">searchContractTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.search.SearchPersonTests" hash-for-method="searchPersonTest">searchPersonTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.search.SearchVehicleTests" hash-for-method="searchVehicle">searchVehicle</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.contracts.dsago.TerminationDsagoTests" hash-for-method="terminationDsagoTest">terminationDsagoTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.contracts.express.TerminationExpressTests" hash-for-method="terminationExpressTest">terminationExpressTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.contracts.ob.TerminationGeneralBusinessTests" hash-for-method="terminationGeneralBusinessTest">terminationGeneralBusinessTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.contracts.greenCard.TerminationGreenCardTests" hash-for-method="terminationGreenCardTest">terminationGreenCardTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.contracts.kasko.TerminationKaskoTests" hash-for-method="terminationKaskoTest">terminationKaskoTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.contracts.life.TerminationLifeTests" hash-for-method="terminationLifeTest">terminationLifeTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.contracts.osago.TerminationOsagoTests" hash-for-method="terminationOsagoTest">terminationOsagoTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.contracts.osgopp.TerminationOsgoppTests" hash-for-method="terminationOsgoppTest">terminationOsgoppTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.contracts.osopo.TerminationOsopoTests" hash-for-method="terminationOsopoTest">terminationOsopoTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Surefire_suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Surefire_suite" class="panel Surefire_suite">
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.contracts.greenCard.CreateGreenCardTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createGreenCardTest">
+                  </a> <!-- createGreenCardTest -->
+                  <span class="method-name">createGreenCardTest</span>
+                  <em>
+(Минимально заполненный)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.agentStatement.RemoveAgentStatementNoDelTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="removeAgentStatementNonDelTest">
+                  </a> <!-- removeAgentStatementNonDelTest -->
+                  <span class="method-name">removeAgentStatementNonDelTest</span>
+                  <em>
+(Удаление не удаляемого ОА)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.contracts.greenCard.TerminationGreenCardTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="terminationGreenCardTest">
+                  </a> <!-- terminationGreenCardTest -->
+                  <span class="method-name">terminationGreenCardTest</span>
+                  <em>
+(На текущую дату)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.contracts.osago.TerminationOsagoTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="terminationOsagoTest">
+                  </a> <!-- terminationOsagoTest -->
+                  <span class="method-name">terminationOsagoTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.contracts.dsago.TerminationDsagoTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="terminationDsagoTest">
+                  </a> <!-- terminationDsagoTest -->
+                  <span class="method-name">terminationDsagoTest</span>
+                  <em>
+(На текущую дату)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.contracts.kasko.TerminationKaskoTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="terminationKaskoTest">
+                  </a> <!-- terminationKaskoTest -->
+                  <span class="method-name">terminationKaskoTest</span>
+                  <em>
+(На текущую дату)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.search.SearchVehicleTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchVehicle">
+                  </a> <!-- searchVehicle -->
+                  <span class="method-name">searchVehicle</span>
+                  <em>
+(По владельцу и марке)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.contracts.osago.CreateOsagoTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createOsagoTest">
+                  </a> <!-- createOsagoTest -->
+                  <span class="method-name">createOsagoTest</span>
+                  <em>
+(Минимально заполненный)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.contracts.osgopp.RemoveOsgoppTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="removeOsgoppTest">
+                  </a> <!-- removeOsgoppTest -->
+                  <span class="method-name">removeOsgoppTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.agentStatement.RemoveAgentStatementTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="removeAgentStatementRuTest">
+                  </a> <!-- removeAgentStatementRuTest -->
+                  <span class="method-name">removeAgentStatementRuTest</span>
+                  <em>
+(Удаление рублевого ОА)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="removeAgentStatementUsdTest">
+                  </a> <!-- removeAgentStatementUsdTest -->
+                  <span class="method-name">removeAgentStatementUsdTest</span>
+                  <em>
+(Удаление валютного ОА)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.contracts.ob.TerminationGeneralBusinessTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="terminationGeneralBusinessTest">
+                  </a> <!-- terminationGeneralBusinessTest -->
+                  <span class="method-name">terminationGeneralBusinessTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.contracts.boxed.CreateBoxedTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createBoxedTest">
+                  </a> <!-- createBoxedTest -->
+                  <span class="method-name">createBoxedTest</span>
+                  <em>
+(Минимально заполненный)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.contracts.osago.RemoveOsagoTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="removeOsagoTest">
+                  </a> <!-- removeOsagoTest -->
+                  <span class="method-name">removeOsagoTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.contracts.greenCard.RemoveGreenCardTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="removeGreenCardTest">
+                  </a> <!-- removeGreenCardTest -->
+                  <span class="method-name">removeGreenCardTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.contracts.life.TerminationLifeTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="terminationLifeTest">
+                  </a> <!-- terminationLifeTest -->
+                  <span class="method-name">terminationLifeTest</span>
+                  <em>
+(На текущую дату)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.search.SearchAgentTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchAgentTest">
+                  </a> <!-- searchAgentTest -->
+                  <span class="method-name">searchAgentTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.contracts.kasko.RemoveKaskoTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="removeKaskoTest">
+                  </a> <!-- removeKaskoTest -->
+                  <span class="method-name">removeKaskoTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.search.SearchAgentStatementTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchAgentStatementTest">
+                  </a> <!-- searchAgentStatementTest -->
+                  <span class="method-name">searchAgentStatementTest</span>
+                  <em>
+(По номеру рублевого ОА и подразделению)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.contracts.express.CreateExpressTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createExpressTest">
+                  </a> <!-- createExpressTest -->
+                  <span class="method-name">createExpressTest</span>
+                  <em>
+(Минимально заполненный)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.contracts.osgopp.CreateOsgoppTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createOsgoppTest">
+                  </a> <!-- createOsgoppTest -->
+                  <span class="method-name">createOsgoppTest</span>
+                  <em>
+(Минимально заполненный)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.contracts.ob.RemoveGeneralBusinessTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="removeGeneralBusinessTest">
+                  </a> <!-- removeGeneralBusinessTest -->
+                  <span class="method-name">removeGeneralBusinessTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.contracts.boxed.RemoveBoxedTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="removeBoxedTest">
+                  </a> <!-- removeBoxedTest -->
+                  <span class="method-name">removeBoxedTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.contracts.ob.CreateGeneralBusinessTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createGeneralBusinessTest">
+                  </a> <!-- createGeneralBusinessTest -->
+                  <span class="method-name">createGeneralBusinessTest</span>
+                  <em>
+(Минимально заполненный)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.contracts.dsago.RemoveDsagoTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="removeDsagoTest">
+                  </a> <!-- removeDsagoTest -->
+                  <span class="method-name">removeDsagoTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.contracts.osopo.TerminationOsopoTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="terminationOsopoTest">
+                  </a> <!-- terminationOsopoTest -->
+                  <span class="method-name">terminationOsopoTest</span>
+                  <em>
+(На текущую дату)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.contracts.express.RemoveExpressTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="removeExpressTest">
+                  </a> <!-- removeExpressTest -->
+                  <span class="method-name">removeExpressTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.search.SearchContractTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchContractTest">
+                  </a> <!-- searchContractTest -->
+                  <span class="method-name">searchContractTest</span>
+                  <em>
+(По серии и номеру)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.contracts.express.TerminationExpressTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="terminationExpressTest">
+                  </a> <!-- terminationExpressTest -->
+                  <span class="method-name">terminationExpressTest</span>
+                  <em>
+(На текущую дату)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.agentStatement.CreateAgentStatementTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createAgentStatementRuTest">
+                  </a> <!-- createAgentStatementRuTest -->
+                  <span class="method-name">createAgentStatementRuTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="createAgentStatementUSDTest">
+                  </a> <!-- createAgentStatementUSDTest -->
+                  <span class="method-name">createAgentStatementUSDTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.contracts.osopo.CreateOsopoTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createOsopoTest">
+                  </a> <!-- createOsopoTest -->
+                  <span class="method-name">createOsopoTest</span>
+                  <em>
+(Минимально заполненный)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.contracts.osopo.RemoveOsopoTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="removeOsopoTest">
+                  </a> <!-- removeOsopoTest -->
+                  <span class="method-name">removeOsopoTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.contracts.life.CreateLifeTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createLifeTest">
+                  </a> <!-- createLifeTest -->
+                  <span class="method-name">createLifeTest</span>
+                  <em>
+(Минимально заполненный)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.search.SearchPersonTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchPersonTest">
+                  </a> <!-- searchPersonTest -->
+                  <span class="method-name">searchPersonTest</span>
+                  <em>
+(По типу и ФИО)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.contracts.life.RemoveLifeTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="removeLifeTest">
+                  </a> <!-- removeLifeTest -->
+                  <span class="method-name">removeLifeTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.contracts.dsago.CreateDsagoTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createDsagoTest">
+                  </a> <!-- createDsagoTest -->
+                  <span class="method-name">createDsagoTest</span>
+                  <em>
+(Минимально заполненный)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.contracts.kasko.CreateKaskoTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createKaskoTest">
+                  </a> <!-- createKaskoTest -->
+                  <span class="method-name">createKaskoTest</span>
+                  <em>
+(Минимально заполненный)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.contracts.osgopp.TerminationOsgoppTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="terminationOsgoppTest">
+                  </a> <!-- terminationOsgoppTest -->
+                  <span class="method-name">terminationOsgoppTest</span>
+                  <em>
+(На текущую дату)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+        </div> <!-- panel Surefire_suite -->
+        <div panel-name="test-xml-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite thread-count=&quot;1&quot; verbose=&quot;0&quot; name=&quot;Surefire suite&quot;&gt;
+  &lt;test name=&quot;Surefire test&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;ru.rgs.APITests.JerseyTest&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.SubmitOsagoTest&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.TestBase&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.tests.agentStatement.CreateAgentStatementTests&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.tests.agentStatement.RemoveAgentStatementNoDelTests&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.tests.agentStatement.RemoveAgentStatementTests&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.tests.contracts.boxed.CreateBoxedTests&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.tests.contracts.boxed.RemoveBoxedTests&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.tests.contracts.boxed.TerminationBoxedTests&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.tests.contracts.dsago.CreateDsagoTests&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.tests.contracts.dsago.RemoveDsagoTests&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.tests.contracts.dsago.TerminationDsagoTests&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.tests.contracts.express.CreateExpressTests&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.tests.contracts.express.RemoveExpressTests&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.tests.contracts.express.TerminationExpressTests&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.tests.contracts.greenCard.CreateGreenCardTests&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.tests.contracts.greenCard.RemoveGreenCardTests&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.tests.contracts.greenCard.TerminationGreenCardTests&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.tests.contracts.kasko.CreateKaskoTests&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.tests.contracts.kasko.RemoveKaskoTests&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.tests.contracts.kasko.TerminationKaskoTests&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.tests.contracts.life.CreateLifeTests&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.tests.contracts.life.RemoveLifeTests&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.tests.contracts.life.TerminationLifeTests&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.tests.contracts.ob.CreateGeneralBusinessTests&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.tests.contracts.ob.RemoveGeneralBusinessTests&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.tests.contracts.ob.TerminationGeneralBusinessTests&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.tests.contracts.osago.CreateOsagoTests&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.tests.contracts.osago.RemoveOsagoTests&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.tests.contracts.osago.TerminationOsagoTests&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.tests.contracts.osgopp.CreateOsgoppTests&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.tests.contracts.osgopp.RemoveOsgoppTests&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.tests.contracts.osgopp.TerminationOsgoppTests&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.tests.contracts.osopo.CreateOsopoTests&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.tests.contracts.osopo.RemoveOsopoTests&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.tests.contracts.osopo.TerminationOsopoTests&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.tests.search.SearchAgentStatementTests&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.tests.search.SearchAgentTests&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.tests.search.SearchContractTests&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.tests.search.SearchPersonTests&quot;/&gt;
+      &lt;class name=&quot;ru.rgs.APITests.tests.search.SearchVehicleTests&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Surefire test --&gt;
+&lt;/suite&gt; &lt;!-- Surefire suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Surefire test (41 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Surefire_suite');
+function tableData_Surefire_suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(39);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'removeAgentStatementNonDelTest')
+data.setCell(0, 2, 'ru.rgs.APITests.tests.agentStatement.RemoveAgentStatementNoDelTests')
+data.setCell(0, 3, 14968);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'removeGreenCardTest')
+data.setCell(1, 2, 'ru.rgs.APITests.tests.contracts.greenCard.RemoveGreenCardTests')
+data.setCell(1, 3, 2983);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'createAgentStatementRuTest')
+data.setCell(2, 2, 'ru.rgs.APITests.tests.agentStatement.CreateAgentStatementTests')
+data.setCell(2, 3, 2445);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'removeAgentStatementUsdTest')
+data.setCell(3, 2, 'ru.rgs.APITests.tests.agentStatement.RemoveAgentStatementTests')
+data.setCell(3, 3, 1607);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'createAgentStatementUSDTest')
+data.setCell(4, 2, 'ru.rgs.APITests.tests.agentStatement.CreateAgentStatementTests')
+data.setCell(4, 3, 1396);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'removeAgentStatementRuTest')
+data.setCell(5, 2, 'ru.rgs.APITests.tests.agentStatement.RemoveAgentStatementTests')
+data.setCell(5, 3, 1283);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'searchContractTest')
+data.setCell(6, 2, 'ru.rgs.APITests.tests.search.SearchContractTests')
+data.setCell(6, 3, 742);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'searchPersonTest')
+data.setCell(7, 2, 'ru.rgs.APITests.tests.search.SearchPersonTests')
+data.setCell(7, 3, 397);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'searchVehicle')
+data.setCell(8, 2, 'ru.rgs.APITests.tests.search.SearchVehicleTests')
+data.setCell(8, 3, 397);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'searchAgentTest')
+data.setCell(9, 2, 'ru.rgs.APITests.tests.search.SearchAgentTests')
+data.setCell(9, 3, 360);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'removeOsagoTest')
+data.setCell(10, 2, 'ru.rgs.APITests.tests.contracts.osago.RemoveOsagoTests')
+data.setCell(10, 3, 290);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'removeBoxedTest')
+data.setCell(11, 2, 'ru.rgs.APITests.tests.contracts.boxed.RemoveBoxedTests')
+data.setCell(11, 3, 267);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'removeOsopoTest')
+data.setCell(12, 2, 'ru.rgs.APITests.tests.contracts.osopo.RemoveOsopoTests')
+data.setCell(12, 3, 244);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'removeDsagoTest')
+data.setCell(13, 2, 'ru.rgs.APITests.tests.contracts.dsago.RemoveDsagoTests')
+data.setCell(13, 3, 235);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'removeGeneralBusinessTest')
+data.setCell(14, 2, 'ru.rgs.APITests.tests.contracts.ob.RemoveGeneralBusinessTests')
+data.setCell(14, 3, 234);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'removeLifeTest')
+data.setCell(15, 2, 'ru.rgs.APITests.tests.contracts.life.RemoveLifeTests')
+data.setCell(15, 3, 230);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'searchAgentStatementTest')
+data.setCell(16, 2, 'ru.rgs.APITests.tests.search.SearchAgentStatementTests')
+data.setCell(16, 3, 226);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'removeKaskoTest')
+data.setCell(17, 2, 'ru.rgs.APITests.tests.contracts.kasko.RemoveKaskoTests')
+data.setCell(17, 3, 220);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'removeOsgoppTest')
+data.setCell(18, 2, 'ru.rgs.APITests.tests.contracts.osgopp.RemoveOsgoppTests')
+data.setCell(18, 3, 208);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'removeExpressTest')
+data.setCell(19, 2, 'ru.rgs.APITests.tests.contracts.express.RemoveExpressTests')
+data.setCell(19, 3, 207);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'terminationGreenCardTest')
+data.setCell(20, 2, 'ru.rgs.APITests.tests.contracts.greenCard.TerminationGreenCardTests')
+data.setCell(20, 3, 6);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'terminationLifeTest')
+data.setCell(21, 2, 'ru.rgs.APITests.tests.contracts.life.TerminationLifeTests')
+data.setCell(21, 3, 5);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'createLifeTest')
+data.setCell(22, 2, 'ru.rgs.APITests.tests.contracts.life.CreateLifeTests')
+data.setCell(22, 3, 5);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'createGeneralBusinessTest')
+data.setCell(23, 2, 'ru.rgs.APITests.tests.contracts.ob.CreateGeneralBusinessTests')
+data.setCell(23, 3, 5);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'createDsagoTest')
+data.setCell(24, 2, 'ru.rgs.APITests.tests.contracts.dsago.CreateDsagoTests')
+data.setCell(24, 3, 5);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'createBoxedTest')
+data.setCell(25, 2, 'ru.rgs.APITests.tests.contracts.boxed.CreateBoxedTests')
+data.setCell(25, 3, 4);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'createOsgoppTest')
+data.setCell(26, 2, 'ru.rgs.APITests.tests.contracts.osgopp.CreateOsgoppTests')
+data.setCell(26, 3, 4);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'createGreenCardTest')
+data.setCell(27, 2, 'ru.rgs.APITests.tests.contracts.greenCard.CreateGreenCardTests')
+data.setCell(27, 3, 3);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'createOsagoTest')
+data.setCell(28, 2, 'ru.rgs.APITests.tests.contracts.osago.CreateOsagoTests')
+data.setCell(28, 3, 3);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'createKaskoTest')
+data.setCell(29, 2, 'ru.rgs.APITests.tests.contracts.kasko.CreateKaskoTests')
+data.setCell(29, 3, 3);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'terminationOsagoTest')
+data.setCell(30, 2, 'ru.rgs.APITests.tests.contracts.osago.TerminationOsagoTests')
+data.setCell(30, 3, 3);
+data.setCell(31, 0, 31)
+data.setCell(31, 1, 'terminationGeneralBusinessTest')
+data.setCell(31, 2, 'ru.rgs.APITests.tests.contracts.ob.TerminationGeneralBusinessTests')
+data.setCell(31, 3, 3);
+data.setCell(32, 0, 32)
+data.setCell(32, 1, 'terminationKaskoTest')
+data.setCell(32, 2, 'ru.rgs.APITests.tests.contracts.kasko.TerminationKaskoTests')
+data.setCell(32, 3, 2);
+data.setCell(33, 0, 33)
+data.setCell(33, 1, 'terminationExpressTest')
+data.setCell(33, 2, 'ru.rgs.APITests.tests.contracts.express.TerminationExpressTests')
+data.setCell(33, 3, 2);
+data.setCell(34, 0, 34)
+data.setCell(34, 1, 'terminationOsgoppTest')
+data.setCell(34, 2, 'ru.rgs.APITests.tests.contracts.osgopp.TerminationOsgoppTests')
+data.setCell(34, 3, 2);
+data.setCell(35, 0, 35)
+data.setCell(35, 1, 'createExpressTest')
+data.setCell(35, 2, 'ru.rgs.APITests.tests.contracts.express.CreateExpressTests')
+data.setCell(35, 3, 2);
+data.setCell(36, 0, 36)
+data.setCell(36, 1, 'createOsopoTest')
+data.setCell(36, 2, 'ru.rgs.APITests.tests.contracts.osopo.CreateOsopoTests')
+data.setCell(36, 3, 2);
+data.setCell(37, 0, 37)
+data.setCell(37, 1, 'terminationOsopoTest')
+data.setCell(37, 2, 'ru.rgs.APITests.tests.contracts.osopo.TerminationOsopoTests')
+data.setCell(37, 3, 1);
+data.setCell(38, 0, 38)
+data.setCell(38, 1, 'terminationDsagoTest')
+data.setCell(38, 2, 'ru.rgs.APITests.tests.contracts.dsago.TerminationDsagoTests')
+data.setCell(38, 3, 1);
+window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 29 seconds</span>
+              <div id="times-div-Surefire_suite">
+              </div> <!-- times-div-Surefire_suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">2 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">ru.rgs.APITests.JerseyTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">createAgentStatement</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">ru.rgs.APITests.tests.contracts.boxed.TerminationBoxedTests</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">terminationBoxedTest</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.agentStatement.CreateAgentStatementTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">1093 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">createAgentStatementRuTest</span>
+                <span class="method-start">1099 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">createAgentStatementUSDTest</span>
+                <span class="method-start">3643 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.dsago.CreateDsagoTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">5044 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">5224 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">createDsagoTest</span>
+                <span class="method-start">5225 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.agentStatement.RemoveAgentStatementNoDelTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">5238 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">5474 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">removeAgentStatementNonDelTest</span>
+                <span class="method-start">5474 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.dsago.RemoveDsagoTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">20447 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">20597 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">removeDsagoTest</span>
+                <span class="method-start">20597 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.agentStatement.RemoveAgentStatementTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">20834 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">20972 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">removeAgentStatementRuTest</span>
+                <span class="method-start">20973 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">removeAgentStatementUsdTest</span>
+                <span class="method-start">22260 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.dsago.TerminationDsagoTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">23872 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">24028 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">terminationDsagoTest</span>
+                <span class="method-start">24029 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.boxed.CreateBoxedTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">24031 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">24283 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">createBoxedTest</span>
+                <span class="method-start">24284 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.express.CreateExpressTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">24292 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">24508 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">createExpressTest</span>
+                <span class="method-start">24509 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.boxed.RemoveBoxedTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">24513 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">24746 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">removeBoxedTest</span>
+                <span class="method-start">24747 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.express.RemoveExpressTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">25018 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">25165 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">removeExpressTest</span>
+                <span class="method-start">25165 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.express.TerminationExpressTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">25375 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">25530 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">terminationExpressTest</span>
+                <span class="method-start">25530 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.greenCard.CreateGreenCardTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">25533 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">createGreenCardTest</span>
+                <span class="method-start">25825 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">25825 ms</span>
+              </div> <!-- configuration-class before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.greenCard.RemoveGreenCardTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">25830 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">26041 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">removeGreenCardTest</span>
+                <span class="method-start">26042 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.greenCard.TerminationGreenCardTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">29031 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">29216 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">terminationGreenCardTest</span>
+                <span class="method-start">29217 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.kasko.CreateKaskoTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">29228 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">29466 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">createKaskoTest</span>
+                <span class="method-start">29467 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.kasko.RemoveKaskoTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">29474 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">29694 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">removeKaskoTest</span>
+                <span class="method-start">29694 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.kasko.TerminationKaskoTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">29917 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">30098 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">terminationKaskoTest</span>
+                <span class="method-start">30099 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.life.CreateLifeTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">30105 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">30329 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">createLifeTest</span>
+                <span class="method-start">30330 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.life.RemoveLifeTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">30340 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">30569 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">removeLifeTest</span>
+                <span class="method-start">30570 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.life.TerminationLifeTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">30805 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">31082 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">terminationLifeTest</span>
+                <span class="method-start">31083 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.ob.CreateGeneralBusinessTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">31093 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">createGeneralBusinessTest</span>
+                <span class="method-start">31349 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">31349 ms</span>
+              </div> <!-- configuration-class before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.ob.RemoveGeneralBusinessTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">31359 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">31568 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">removeGeneralBusinessTest</span>
+                <span class="method-start">31568 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.ob.TerminationGeneralBusinessTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">31804 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">31947 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">terminationGeneralBusinessTest</span>
+                <span class="method-start">31948 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.osago.CreateOsagoTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">31956 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">createOsagoTest</span>
+                <span class="method-start">32173 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">32173 ms</span>
+              </div> <!-- configuration-class before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.osago.RemoveOsagoTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">32178 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">32392 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">removeOsagoTest</span>
+                <span class="method-start">32392 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.osago.TerminationOsagoTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">32687 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">32852 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">terminationOsagoTest</span>
+                <span class="method-start">32853 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.osgopp.CreateOsgoppTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">32861 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">33096 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">createOsgoppTest</span>
+                <span class="method-start">33097 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.osgopp.RemoveOsgoppTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">33106 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">33368 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">removeOsgoppTest</span>
+                <span class="method-start">33368 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.osgopp.TerminationOsgoppTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">33579 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">33725 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">terminationOsgoppTest</span>
+                <span class="method-start">33725 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.osopo.CreateOsopoTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">33730 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">createOsopoTest</span>
+                <span class="method-start">33944 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">33944 ms</span>
+              </div> <!-- configuration-class before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.osopo.RemoveOsopoTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">33948 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">34148 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">removeOsopoTest</span>
+                <span class="method-start">34148 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.osopo.TerminationOsopoTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">34398 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">34643 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">terminationOsopoTest</span>
+                <span class="method-start">34643 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.search.SearchAgentStatementTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">34646 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">34850 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">searchAgentStatementTest</span>
+                <span class="method-start">34851 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.search.SearchAgentTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">35085 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">35220 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">searchAgentTest</span>
+                <span class="method-start">35221 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.search.SearchContractTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">35583 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">35779 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">searchContractTest</span>
+                <span class="method-start">35780 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.search.SearchPersonTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">36527 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">36654 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">searchPersonTest</span>
+                <span class="method-start">36654 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.search.SearchVehicleTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">37054 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">37178 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">searchVehicle</span>
+                <span class="method-start">37179 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>
