@@ -24,8 +24,17 @@ public class OsagoCreate {
  	public String toString(){
 		return 
 			"OsagoCreate{" +
-			"createOperationResult = '" + createOperationResult + '\'' + 
+			"createOperationResult =" +
+							"" +
+							"" +
+							"" +
+							"" +
+							" '" + createOperationResult + '\'' +
 			",success = '" + success + '\'' + 
 			"}";
+
+
+
+
 		}
 }
