@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Surefire_suite">
-              <span class="suite-name border-passed">Surefire suite</span>
+              <span class="suite-name border-failed">Surefire suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">39 methods,   39 passed</span>
+                    <span class="method-stats">41 methods, 2 failed,   39 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods failed suite-Surefire_suite"> (hide)</a> <!-- hide-methods failed suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods failed suite-Surefire_suite"> (show)</a> <!-- show-methods failed suite-Surefire_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Surefire_suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.JerseyTest" hash-for-method="createAgentStatement">createAgentStatement</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="ru.rgs.APITests.tests.contracts.boxed.TerminationBoxedTests" hash-for-method="terminationBoxedTest">terminationBoxedTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Surefire_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -307,23 +326,56 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Surefire_suite" class="panel Surefire_suite">
-          <div class="suite-Surefire_suite-class-passed">
+          <div class="suite-Surefire_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">ru.rgs.APITests.tests.contracts.greenCard.CreateGreenCardTests</span>
+              <img src="failed.png"/>
+              <span class="class-name">ru.rgs.APITests.JerseyTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="createGreenCardTest">
-                  </a> <!-- createGreenCardTest -->
-                  <span class="method-name">createGreenCardTest</span>
-                  <em>
-(Минимально заполненный)                  </em>
+                  <a name="createAgentStatement">
+                  </a> <!-- createAgentStatement -->
+                  <span class="method-name">createAgentStatement</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at ru.rgs.APITests.JerseyTest.submitAgentStatement_aroundBody0(JerseyTest.java:57)
+	at ru.rgs.APITests.JerseyTest$AjcClosure1.run(JerseyTest.java:1)
+	at io.qameta.allure.aspects.StepsAspects.step(StepsAspects.java:46)
+	at ru.rgs.APITests.JerseyTest.submitAgentStatement(JerseyTest.java:54)
+	at ru.rgs.APITests.JerseyTest.createAgentStatement(JerseyTest.java:42)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Surefire_suite-class-passed -->
+          </div> <!-- suite-Surefire_suite-class-failed -->
+          <div class="suite-Surefire_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.contracts.boxed.TerminationBoxedTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="terminationBoxedTest">
+                  </a> <!-- terminationBoxedTest -->
+                  <span class="method-name">terminationBoxedTest</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at ru.rgs.APITests.model.contracts.termination.ContractChange.&lt;init&gt;(ContractChange.java:149)
+	at ru.rgs.APITests.model.contracts.termination.ContractTermination.&lt;init&gt;(ContractTermination.java:22)
+	at ru.rgs.APITests.tests.contracts.boxed.TerminationBoxedTests.createRequestBodyForTerminationContract_aroundBody2(TerminationBoxedTests.java:44)
+	at ru.rgs.APITests.tests.contracts.boxed.TerminationBoxedTests$AjcClosure3.run(TerminationBoxedTests.java:1)
+	at io.qameta.allure.aspects.StepsAspects.step(StepsAspects.java:46)
+	at ru.rgs.APITests.tests.contracts.boxed.TerminationBoxedTests.createRequestBodyForTerminationContract(TerminationBoxedTests.java:43)
+	at ru.rgs.APITests.tests.contracts.boxed.TerminationBoxedTests.terminationBoxedTest(TerminationBoxedTests.java:31)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(На текущую дату)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-failed -->
           <div class="suite-Surefire_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -337,6 +389,23 @@
                   <span class="method-name">removeAgentStatementNonDelTest</span>
                   <em>
 (Удаление не удаляемого ОА)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.contracts.greenCard.CreateGreenCardTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createGreenCardTest">
+                  </a> <!-- createGreenCardTest -->
+                  <span class="method-name">createGreenCardTest</span>
+                  <em>
+(Минимально заполненный)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -594,6 +663,23 @@
           <div class="suite-Surefire_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.contracts.osgopp.CreateOsgoppTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createOsgoppTest">
+                  </a> <!-- createOsgoppTest -->
+                  <span class="method-name">createOsgoppTest</span>
+                  <em>
+(Минимально заполненный)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">ru.rgs.APITests.tests.search.SearchAgentStatementTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -619,23 +705,6 @@
                   <a name="createExpressTest">
                   </a> <!-- createExpressTest -->
                   <span class="method-name">createExpressTest</span>
-                  <em>
-(Минимально заполненный)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Surefire_suite-class-passed -->
-          <div class="suite-Surefire_suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">ru.rgs.APITests.tests.contracts.osgopp.CreateOsgoppTests</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="createOsgoppTest">
-                  </a> <!-- createOsgoppTest -->
-                  <span class="method-name">createOsgoppTest</span>
                   <em>
 (Минимально заполненный)                  </em>
                 </div> <!-- method-content -->
@@ -756,23 +825,6 @@
           <div class="suite-Surefire_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">ru.rgs.APITests.tests.contracts.express.TerminationExpressTests</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="terminationExpressTest">
-                  </a> <!-- terminationExpressTest -->
-                  <span class="method-name">terminationExpressTest</span>
-                  <em>
-(На текущую дату)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Surefire_suite-class-passed -->
-          <div class="suite-Surefire_suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
               <span class="class-name">ru.rgs.APITests.tests.agentStatement.CreateAgentStatementTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -788,6 +840,23 @@
                   <a name="createAgentStatementUSDTest">
                   </a> <!-- createAgentStatementUSDTest -->
                   <span class="method-name">createAgentStatementUSDTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.contracts.express.TerminationExpressTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="terminationExpressTest">
+                  </a> <!-- terminationExpressTest -->
+                  <span class="method-name">terminationExpressTest</span>
+                  <em>
+(На текущую дату)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -844,6 +913,21 @@
           <div class="suite-Surefire_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
+              <span class="class-name">ru.rgs.APITests.tests.contracts.life.RemoveLifeTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="removeLifeTest">
+                  </a> <!-- removeLifeTest -->
+                  <span class="method-name">removeLifeTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">ru.rgs.APITests.tests.search.SearchPersonTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -854,21 +938,6 @@
                   <span class="method-name">searchPersonTest</span>
                   <em>
 (По типу и ФИО)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Surefire_suite-class-passed -->
-          <div class="suite-Surefire_suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">ru.rgs.APITests.tests.contracts.life.RemoveLifeTests</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="removeLifeTest">
-                  </a> <!-- removeLifeTest -->
-                  <span class="method-name">removeLifeTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -1015,168 +1084,176 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(39);
+data.addRows(41);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'removeAgentStatementNonDelTest')
-data.setCell(0, 2, 'ru.rgs.APITests.tests.agentStatement.RemoveAgentStatementNoDelTests')
-data.setCell(0, 3, 14968);
+data.setCell(0, 1, 'createAgentStatementRuTest')
+data.setCell(0, 2, 'ru.rgs.APITests.tests.agentStatement.CreateAgentStatementTests')
+data.setCell(0, 3, 24158);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'removeGreenCardTest')
-data.setCell(1, 2, 'ru.rgs.APITests.tests.contracts.greenCard.RemoveGreenCardTests')
-data.setCell(1, 3, 2983);
+data.setCell(1, 1, 'createAgentStatementUSDTest')
+data.setCell(1, 2, 'ru.rgs.APITests.tests.agentStatement.CreateAgentStatementTests')
+data.setCell(1, 3, 8647);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'createAgentStatementRuTest')
-data.setCell(2, 2, 'ru.rgs.APITests.tests.agentStatement.CreateAgentStatementTests')
-data.setCell(2, 3, 2445);
+data.setCell(2, 1, 'removeBoxedTest')
+data.setCell(2, 2, 'ru.rgs.APITests.tests.contracts.boxed.RemoveBoxedTests')
+data.setCell(2, 3, 5068);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'removeAgentStatementUsdTest')
+data.setCell(3, 1, 'removeAgentStatementRuTest')
 data.setCell(3, 2, 'ru.rgs.APITests.tests.agentStatement.RemoveAgentStatementTests')
-data.setCell(3, 3, 1607);
+data.setCell(3, 3, 4677);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'createAgentStatementUSDTest')
-data.setCell(4, 2, 'ru.rgs.APITests.tests.agentStatement.CreateAgentStatementTests')
-data.setCell(4, 3, 1396);
+data.setCell(4, 1, 'removeAgentStatementNonDelTest')
+data.setCell(4, 2, 'ru.rgs.APITests.tests.agentStatement.RemoveAgentStatementNoDelTests')
+data.setCell(4, 3, 3662);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'removeAgentStatementRuTest')
+data.setCell(5, 1, 'removeAgentStatementUsdTest')
 data.setCell(5, 2, 'ru.rgs.APITests.tests.agentStatement.RemoveAgentStatementTests')
-data.setCell(5, 3, 1283);
+data.setCell(5, 3, 2166);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'searchContractTest')
-data.setCell(6, 2, 'ru.rgs.APITests.tests.search.SearchContractTests')
-data.setCell(6, 3, 742);
+data.setCell(6, 1, 'createAgentStatement')
+data.setCell(6, 2, 'ru.rgs.APITests.JerseyTest')
+data.setCell(6, 3, 2116);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'searchPersonTest')
-data.setCell(7, 2, 'ru.rgs.APITests.tests.search.SearchPersonTests')
-data.setCell(7, 3, 397);
+data.setCell(7, 1, 'searchVehicle')
+data.setCell(7, 2, 'ru.rgs.APITests.tests.search.SearchVehicleTests')
+data.setCell(7, 3, 1546);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'searchVehicle')
-data.setCell(8, 2, 'ru.rgs.APITests.tests.search.SearchVehicleTests')
-data.setCell(8, 3, 397);
+data.setCell(8, 1, 'searchPersonTest')
+data.setCell(8, 2, 'ru.rgs.APITests.tests.search.SearchPersonTests')
+data.setCell(8, 3, 1357);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'searchAgentTest')
-data.setCell(9, 2, 'ru.rgs.APITests.tests.search.SearchAgentTests')
-data.setCell(9, 3, 360);
+data.setCell(9, 1, 'searchContractTest')
+data.setCell(9, 2, 'ru.rgs.APITests.tests.search.SearchContractTests')
+data.setCell(9, 3, 1099);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'removeOsagoTest')
-data.setCell(10, 2, 'ru.rgs.APITests.tests.contracts.osago.RemoveOsagoTests')
-data.setCell(10, 3, 290);
+data.setCell(10, 1, 'searchAgentTest')
+data.setCell(10, 2, 'ru.rgs.APITests.tests.search.SearchAgentTests')
+data.setCell(10, 3, 429);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'removeBoxedTest')
-data.setCell(11, 2, 'ru.rgs.APITests.tests.contracts.boxed.RemoveBoxedTests')
-data.setCell(11, 3, 267);
+data.setCell(11, 1, 'removeDsagoTest')
+data.setCell(11, 2, 'ru.rgs.APITests.tests.contracts.dsago.RemoveDsagoTests')
+data.setCell(11, 3, 293);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'removeOsopoTest')
-data.setCell(12, 2, 'ru.rgs.APITests.tests.contracts.osopo.RemoveOsopoTests')
-data.setCell(12, 3, 244);
+data.setCell(12, 1, 'removeGeneralBusinessTest')
+data.setCell(12, 2, 'ru.rgs.APITests.tests.contracts.ob.RemoveGeneralBusinessTests')
+data.setCell(12, 3, 252);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'removeDsagoTest')
-data.setCell(13, 2, 'ru.rgs.APITests.tests.contracts.dsago.RemoveDsagoTests')
-data.setCell(13, 3, 235);
+data.setCell(13, 1, 'removeExpressTest')
+data.setCell(13, 2, 'ru.rgs.APITests.tests.contracts.express.RemoveExpressTests')
+data.setCell(13, 3, 238);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'removeGeneralBusinessTest')
-data.setCell(14, 2, 'ru.rgs.APITests.tests.contracts.ob.RemoveGeneralBusinessTests')
-data.setCell(14, 3, 234);
+data.setCell(14, 1, 'removeGreenCardTest')
+data.setCell(14, 2, 'ru.rgs.APITests.tests.contracts.greenCard.RemoveGreenCardTests')
+data.setCell(14, 3, 238);
 data.setCell(15, 0, 15)
-data.setCell(15, 1, 'removeLifeTest')
-data.setCell(15, 2, 'ru.rgs.APITests.tests.contracts.life.RemoveLifeTests')
-data.setCell(15, 3, 230);
+data.setCell(15, 1, 'searchAgentStatementTest')
+data.setCell(15, 2, 'ru.rgs.APITests.tests.search.SearchAgentStatementTests')
+data.setCell(15, 3, 231);
 data.setCell(16, 0, 16)
-data.setCell(16, 1, 'searchAgentStatementTest')
-data.setCell(16, 2, 'ru.rgs.APITests.tests.search.SearchAgentStatementTests')
-data.setCell(16, 3, 226);
+data.setCell(16, 1, 'removeLifeTest')
+data.setCell(16, 2, 'ru.rgs.APITests.tests.contracts.life.RemoveLifeTests')
+data.setCell(16, 3, 223);
 data.setCell(17, 0, 17)
 data.setCell(17, 1, 'removeKaskoTest')
 data.setCell(17, 2, 'ru.rgs.APITests.tests.contracts.kasko.RemoveKaskoTests')
-data.setCell(17, 3, 220);
+data.setCell(17, 3, 215);
 data.setCell(18, 0, 18)
 data.setCell(18, 1, 'removeOsgoppTest')
 data.setCell(18, 2, 'ru.rgs.APITests.tests.contracts.osgopp.RemoveOsgoppTests')
-data.setCell(18, 3, 208);
+data.setCell(18, 3, 204);
 data.setCell(19, 0, 19)
-data.setCell(19, 1, 'removeExpressTest')
-data.setCell(19, 2, 'ru.rgs.APITests.tests.contracts.express.RemoveExpressTests')
-data.setCell(19, 3, 207);
+data.setCell(19, 1, 'removeOsagoTest')
+data.setCell(19, 2, 'ru.rgs.APITests.tests.contracts.osago.RemoveOsagoTests')
+data.setCell(19, 3, 201);
 data.setCell(20, 0, 20)
-data.setCell(20, 1, 'terminationGreenCardTest')
-data.setCell(20, 2, 'ru.rgs.APITests.tests.contracts.greenCard.TerminationGreenCardTests')
-data.setCell(20, 3, 6);
+data.setCell(20, 1, 'removeOsopoTest')
+data.setCell(20, 2, 'ru.rgs.APITests.tests.contracts.osopo.RemoveOsopoTests')
+data.setCell(20, 3, 193);
 data.setCell(21, 0, 21)
-data.setCell(21, 1, 'terminationLifeTest')
-data.setCell(21, 2, 'ru.rgs.APITests.tests.contracts.life.TerminationLifeTests')
-data.setCell(21, 3, 5);
+data.setCell(21, 1, 'terminationBoxedTest')
+data.setCell(21, 2, 'ru.rgs.APITests.tests.contracts.boxed.TerminationBoxedTests')
+data.setCell(21, 3, 16);
 data.setCell(22, 0, 22)
-data.setCell(22, 1, 'createLifeTest')
-data.setCell(22, 2, 'ru.rgs.APITests.tests.contracts.life.CreateLifeTests')
-data.setCell(22, 3, 5);
+data.setCell(22, 1, 'createGreenCardTest')
+data.setCell(22, 2, 'ru.rgs.APITests.tests.contracts.greenCard.CreateGreenCardTests')
+data.setCell(22, 3, 7);
 data.setCell(23, 0, 23)
 data.setCell(23, 1, 'createGeneralBusinessTest')
 data.setCell(23, 2, 'ru.rgs.APITests.tests.contracts.ob.CreateGeneralBusinessTests')
-data.setCell(23, 3, 5);
+data.setCell(23, 3, 7);
 data.setCell(24, 0, 24)
-data.setCell(24, 1, 'createDsagoTest')
-data.setCell(24, 2, 'ru.rgs.APITests.tests.contracts.dsago.CreateDsagoTests')
-data.setCell(24, 3, 5);
+data.setCell(24, 1, 'createExpressTest')
+data.setCell(24, 2, 'ru.rgs.APITests.tests.contracts.express.CreateExpressTests')
+data.setCell(24, 3, 6);
 data.setCell(25, 0, 25)
 data.setCell(25, 1, 'createBoxedTest')
 data.setCell(25, 2, 'ru.rgs.APITests.tests.contracts.boxed.CreateBoxedTests')
 data.setCell(25, 3, 4);
 data.setCell(26, 0, 26)
-data.setCell(26, 1, 'createOsgoppTest')
-data.setCell(26, 2, 'ru.rgs.APITests.tests.contracts.osgopp.CreateOsgoppTests')
+data.setCell(26, 1, 'createOsagoTest')
+data.setCell(26, 2, 'ru.rgs.APITests.tests.contracts.osago.CreateOsagoTests')
 data.setCell(26, 3, 4);
 data.setCell(27, 0, 27)
-data.setCell(27, 1, 'createGreenCardTest')
-data.setCell(27, 2, 'ru.rgs.APITests.tests.contracts.greenCard.CreateGreenCardTests')
-data.setCell(27, 3, 3);
+data.setCell(27, 1, 'terminationDsagoTest')
+data.setCell(27, 2, 'ru.rgs.APITests.tests.contracts.dsago.TerminationDsagoTests')
+data.setCell(27, 3, 4);
 data.setCell(28, 0, 28)
-data.setCell(28, 1, 'createOsagoTest')
-data.setCell(28, 2, 'ru.rgs.APITests.tests.contracts.osago.CreateOsagoTests')
+data.setCell(28, 1, 'createKaskoTest')
+data.setCell(28, 2, 'ru.rgs.APITests.tests.contracts.kasko.CreateKaskoTests')
 data.setCell(28, 3, 3);
 data.setCell(29, 0, 29)
-data.setCell(29, 1, 'createKaskoTest')
-data.setCell(29, 2, 'ru.rgs.APITests.tests.contracts.kasko.CreateKaskoTests')
+data.setCell(29, 1, 'createOsgoppTest')
+data.setCell(29, 2, 'ru.rgs.APITests.tests.contracts.osgopp.CreateOsgoppTests')
 data.setCell(29, 3, 3);
 data.setCell(30, 0, 30)
 data.setCell(30, 1, 'terminationOsagoTest')
 data.setCell(30, 2, 'ru.rgs.APITests.tests.contracts.osago.TerminationOsagoTests')
 data.setCell(30, 3, 3);
 data.setCell(31, 0, 31)
-data.setCell(31, 1, 'terminationGeneralBusinessTest')
-data.setCell(31, 2, 'ru.rgs.APITests.tests.contracts.ob.TerminationGeneralBusinessTests')
+data.setCell(31, 1, 'terminationLifeTest')
+data.setCell(31, 2, 'ru.rgs.APITests.tests.contracts.life.TerminationLifeTests')
 data.setCell(31, 3, 3);
 data.setCell(32, 0, 32)
-data.setCell(32, 1, 'terminationKaskoTest')
-data.setCell(32, 2, 'ru.rgs.APITests.tests.contracts.kasko.TerminationKaskoTests')
-data.setCell(32, 3, 2);
+data.setCell(32, 1, 'terminationOsopoTest')
+data.setCell(32, 2, 'ru.rgs.APITests.tests.contracts.osopo.TerminationOsopoTests')
+data.setCell(32, 3, 3);
 data.setCell(33, 0, 33)
-data.setCell(33, 1, 'terminationExpressTest')
-data.setCell(33, 2, 'ru.rgs.APITests.tests.contracts.express.TerminationExpressTests')
+data.setCell(33, 1, 'createLifeTest')
+data.setCell(33, 2, 'ru.rgs.APITests.tests.contracts.life.CreateLifeTests')
 data.setCell(33, 3, 2);
 data.setCell(34, 0, 34)
-data.setCell(34, 1, 'terminationOsgoppTest')
-data.setCell(34, 2, 'ru.rgs.APITests.tests.contracts.osgopp.TerminationOsgoppTests')
+data.setCell(34, 1, 'createDsagoTest')
+data.setCell(34, 2, 'ru.rgs.APITests.tests.contracts.dsago.CreateDsagoTests')
 data.setCell(34, 3, 2);
 data.setCell(35, 0, 35)
-data.setCell(35, 1, 'createExpressTest')
-data.setCell(35, 2, 'ru.rgs.APITests.tests.contracts.express.CreateExpressTests')
+data.setCell(35, 1, 'terminationGreenCardTest')
+data.setCell(35, 2, 'ru.rgs.APITests.tests.contracts.greenCard.TerminationGreenCardTests')
 data.setCell(35, 3, 2);
 data.setCell(36, 0, 36)
-data.setCell(36, 1, 'createOsopoTest')
-data.setCell(36, 2, 'ru.rgs.APITests.tests.contracts.osopo.CreateOsopoTests')
+data.setCell(36, 1, 'terminationExpressTest')
+data.setCell(36, 2, 'ru.rgs.APITests.tests.contracts.express.TerminationExpressTests')
 data.setCell(36, 3, 2);
 data.setCell(37, 0, 37)
-data.setCell(37, 1, 'terminationOsopoTest')
-data.setCell(37, 2, 'ru.rgs.APITests.tests.contracts.osopo.TerminationOsopoTests')
-data.setCell(37, 3, 1);
+data.setCell(37, 1, 'createOsopoTest')
+data.setCell(37, 2, 'ru.rgs.APITests.tests.contracts.osopo.CreateOsopoTests')
+data.setCell(37, 3, 2);
 data.setCell(38, 0, 38)
-data.setCell(38, 1, 'terminationDsagoTest')
-data.setCell(38, 2, 'ru.rgs.APITests.tests.contracts.dsago.TerminationDsagoTests')
-data.setCell(38, 3, 1);
+data.setCell(38, 1, 'terminationKaskoTest')
+data.setCell(38, 2, 'ru.rgs.APITests.tests.contracts.kasko.TerminationKaskoTests')
+data.setCell(38, 3, 2);
+data.setCell(39, 0, 39)
+data.setCell(39, 1, 'terminationGeneralBusinessTest')
+data.setCell(39, 2, 'ru.rgs.APITests.tests.contracts.ob.TerminationGeneralBusinessTests')
+data.setCell(39, 3, 1);
+data.setCell(40, 0, 40)
+data.setCell(40, 1, 'terminationOsgoppTest')
+data.setCell(40, 2, 'ru.rgs.APITests.tests.contracts.osgopp.TerminationOsgoppTests')
+data.setCell(40, 3, 1);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 29 seconds</span>
+              <span class="suite-total-time">Total running time: 57 seconds</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -1191,23 +1268,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Surefire_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">2 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">ru.rgs.APITests.JerseyTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">createAgentStatement</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">ru.rgs.APITests.tests.contracts.boxed.TerminationBoxedTests</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">terminationBoxedTest</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Surefire_suite" class="panel">
@@ -1223,559 +1286,593 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">1093 ms</span>
+                <span class="method-start">1346 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">createAgentStatementRuTest</span>
-                <span class="method-start">1099 ms</span>
+                <span class="method-start">1353 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">createAgentStatementUSDTest</span>
-                <span class="method-start">3643 ms</span>
+                <span class="method-start">25615 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.dsago.CreateDsagoTests</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">ru.rgs.APITests.JerseyTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">5044 ms</span>
+                <span class="method-start">34274 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">5224 ms</span>
+                <span class="method-start">34840 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">createDsagoTest</span>
-                <span class="method-start">5225 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">createAgentStatement</span>
+                <span class="method-start">34841 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">ru.rgs.APITests.tests.agentStatement.RemoveAgentStatementNoDelTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">5238 ms</span>
+                <span class="method-start">36973 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">5474 ms</span>
+                <span class="method-start">37109 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">removeAgentStatementNonDelTest</span>
-                <span class="method-start">5474 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.dsago.RemoveDsagoTests</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">20447 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="configuration-class before">
-                <span class="method-name">init</span>
-                <span class="method-start">20597 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">removeDsagoTest</span>
-                <span class="method-start">20597 ms</span>
+                <span class="method-start">37110 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">ru.rgs.APITests.tests.agentStatement.RemoveAgentStatementTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">20834 ms</span>
+                <span class="method-start">40779 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">20972 ms</span>
+                <span class="method-start">40931 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">removeAgentStatementRuTest</span>
-                <span class="method-start">20973 ms</span>
+                <span class="method-start">40932 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">removeAgentStatementUsdTest</span>
-                <span class="method-start">22260 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.dsago.TerminationDsagoTests</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">23872 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="configuration-class before">
-                <span class="method-name">init</span>
-                <span class="method-start">24028 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">terminationDsagoTest</span>
-                <span class="method-start">24029 ms</span>
+                <span class="method-start">45611 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.boxed.CreateBoxedTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">24031 ms</span>
+                <span class="method-start">47783 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">24283 ms</span>
+                <span class="method-start">48003 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">createBoxedTest</span>
-                <span class="method-start">24284 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.express.CreateExpressTests</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">24292 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="configuration-class before">
-                <span class="method-name">init</span>
-                <span class="method-start">24508 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">createExpressTest</span>
-                <span class="method-start">24509 ms</span>
+                <span class="method-start">48004 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.boxed.RemoveBoxedTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">24513 ms</span>
+                <span class="method-start">48010 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">24746 ms</span>
+                <span class="method-start">48248 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">removeBoxedTest</span>
-                <span class="method-start">24747 ms</span>
+                <span class="method-start">48249 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.boxed.TerminationBoxedTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">53321 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">53500 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">terminationBoxedTest</span>
+                <span class="method-start">53500 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.dsago.CreateDsagoTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">53523 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">53764 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">createDsagoTest</span>
+                <span class="method-start">53764 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.dsago.RemoveDsagoTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">53768 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">53973 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">removeDsagoTest</span>
+                <span class="method-start">53974 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.dsago.TerminationDsagoTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">54273 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">54535 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">terminationDsagoTest</span>
+                <span class="method-start">54536 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.express.CreateExpressTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">54546 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">54779 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">createExpressTest</span>
+                <span class="method-start">54780 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.express.RemoveExpressTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">25018 ms</span>
+                <span class="method-start">54791 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">25165 ms</span>
+                <span class="method-start">55025 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">removeExpressTest</span>
-                <span class="method-start">25165 ms</span>
+                <span class="method-start">55025 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.express.TerminationExpressTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">25375 ms</span>
+                <span class="method-start">55268 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">25530 ms</span>
+                <span class="method-start">55520 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">terminationExpressTest</span>
-                <span class="method-start">25530 ms</span>
+                <span class="method-start">55521 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.greenCard.CreateGreenCardTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">25533 ms</span>
+                <span class="method-start">55526 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">55740 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">createGreenCardTest</span>
-                <span class="method-start">25825 ms</span>
+                <span class="method-start">55741 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-class before">
-                <span class="method-name">init</span>
-                <span class="method-start">25825 ms</span>
-              </div> <!-- configuration-class before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.greenCard.RemoveGreenCardTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">25830 ms</span>
+                <span class="method-start">55752 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">26041 ms</span>
+                <span class="method-start">56038 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">removeGreenCardTest</span>
-                <span class="method-start">26042 ms</span>
+                <span class="method-start">56040 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.greenCard.TerminationGreenCardTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">29031 ms</span>
+                <span class="method-start">56283 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">29216 ms</span>
+                <span class="method-start">56521 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">terminationGreenCardTest</span>
-                <span class="method-start">29217 ms</span>
+                <span class="method-start">56521 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.kasko.CreateKaskoTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">29228 ms</span>
+                <span class="method-start">56526 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">29466 ms</span>
+                <span class="method-start">56740 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">createKaskoTest</span>
-                <span class="method-start">29467 ms</span>
+                <span class="method-start">56741 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.kasko.RemoveKaskoTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">29474 ms</span>
+                <span class="method-start">56747 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">29694 ms</span>
+                <span class="method-start">57002 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">removeKaskoTest</span>
-                <span class="method-start">29694 ms</span>
+                <span class="method-start">57002 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.kasko.TerminationKaskoTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">29917 ms</span>
+                <span class="method-start">57224 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">30098 ms</span>
+                <span class="method-start">57464 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">terminationKaskoTest</span>
-                <span class="method-start">30099 ms</span>
+                <span class="method-start">57465 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.life.CreateLifeTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">30105 ms</span>
+                <span class="method-start">57471 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">30329 ms</span>
+                <span class="method-start">57678 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">createLifeTest</span>
-                <span class="method-start">30330 ms</span>
+                <span class="method-start">57678 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.life.RemoveLifeTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">30340 ms</span>
+                <span class="method-start">57682 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">30569 ms</span>
+                <span class="method-start">57906 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">removeLifeTest</span>
-                <span class="method-start">30570 ms</span>
+                <span class="method-start">57907 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.life.TerminationLifeTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">30805 ms</span>
+                <span class="method-start">58132 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">31082 ms</span>
+                <span class="method-start">58344 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">terminationLifeTest</span>
-                <span class="method-start">31083 ms</span>
+                <span class="method-start">58344 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.ob.CreateGeneralBusinessTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">31093 ms</span>
+                <span class="method-start">58350 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">58613 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">createGeneralBusinessTest</span>
-                <span class="method-start">31349 ms</span>
+                <span class="method-start">58614 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-class before">
-                <span class="method-name">init</span>
-                <span class="method-start">31349 ms</span>
-              </div> <!-- configuration-class before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.ob.RemoveGeneralBusinessTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">31359 ms</span>
+                <span class="method-start">58626 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">31568 ms</span>
+                <span class="method-start">58859 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">removeGeneralBusinessTest</span>
-                <span class="method-start">31568 ms</span>
+                <span class="method-start">58860 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.ob.TerminationGeneralBusinessTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">31804 ms</span>
+                <span class="method-start">59117 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">31947 ms</span>
+                <span class="method-start">59359 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">terminationGeneralBusinessTest</span>
-                <span class="method-start">31948 ms</span>
+                <span class="method-start">59359 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.osago.CreateOsagoTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">31956 ms</span>
+                <span class="method-start">59362 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">59564 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">createOsagoTest</span>
-                <span class="method-start">32173 ms</span>
+                <span class="method-start">59565 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-class before">
-                <span class="method-name">init</span>
-                <span class="method-start">32173 ms</span>
-              </div> <!-- configuration-class before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.osago.RemoveOsagoTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">32178 ms</span>
+                <span class="method-start">59574 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">32392 ms</span>
+                <span class="method-start">59787 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">removeOsagoTest</span>
-                <span class="method-start">32392 ms</span>
+                <span class="method-start">59787 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.osago.TerminationOsagoTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">32687 ms</span>
+                <span class="method-start">59990 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">32852 ms</span>
+                <span class="method-start">60147 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">terminationOsagoTest</span>
-                <span class="method-start">32853 ms</span>
+                <span class="method-start">60148 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.osgopp.CreateOsgoppTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">32861 ms</span>
+                <span class="method-start">60155 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">33096 ms</span>
+                <span class="method-start">60361 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">createOsgoppTest</span>
-                <span class="method-start">33097 ms</span>
+                <span class="method-start">60362 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.osgopp.RemoveOsgoppTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">33106 ms</span>
+                <span class="method-start">60368 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">33368 ms</span>
+                <span class="method-start">60576 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">removeOsgoppTest</span>
-                <span class="method-start">33368 ms</span>
+                <span class="method-start">60577 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.osgopp.TerminationOsgoppTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">33579 ms</span>
+                <span class="method-start">60788 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">33725 ms</span>
+                <span class="method-start">60995 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">terminationOsgoppTest</span>
-                <span class="method-start">33725 ms</span>
+                <span class="method-start">60996 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.osopo.CreateOsopoTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">33730 ms</span>
+                <span class="method-start">60999 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">61248 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">createOsopoTest</span>
-                <span class="method-start">33944 ms</span>
+                <span class="method-start">61248 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-class before">
-                <span class="method-name">init</span>
-                <span class="method-start">33944 ms</span>
-              </div> <!-- configuration-class before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.osopo.RemoveOsopoTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">33948 ms</span>
+                <span class="method-start">61252 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">34148 ms</span>
+                <span class="method-start">61463 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">removeOsopoTest</span>
-                <span class="method-start">34148 ms</span>
+                <span class="method-start">61464 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">ru.rgs.APITests.tests.contracts.osopo.TerminationOsopoTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">34398 ms</span>
+                <span class="method-start">61659 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">34643 ms</span>
+                <span class="method-start">61861 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">terminationOsopoTest</span>
-                <span class="method-start">34643 ms</span>
+                <span class="method-start">61862 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">ru.rgs.APITests.tests.search.SearchAgentStatementTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">34646 ms</span>
+                <span class="method-start">61870 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">34850 ms</span>
+                <span class="method-start">62076 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">searchAgentStatementTest</span>
-                <span class="method-start">34851 ms</span>
+                <span class="method-start">62077 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">ru.rgs.APITests.tests.search.SearchAgentTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">35085 ms</span>
+                <span class="method-start">62313 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">35220 ms</span>
+                <span class="method-start">62463 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">searchAgentTest</span>
-                <span class="method-start">35221 ms</span>
+                <span class="method-start">62464 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">ru.rgs.APITests.tests.search.SearchContractTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">35583 ms</span>
+                <span class="method-start">62894 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">35779 ms</span>
+                <span class="method-start">63028 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">searchContractTest</span>
-                <span class="method-start">35780 ms</span>
+                <span class="method-start">63029 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">ru.rgs.APITests.tests.search.SearchPersonTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">36527 ms</span>
+                <span class="method-start">64133 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">36654 ms</span>
+                <span class="method-start">64274 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">searchPersonTest</span>
-                <span class="method-start">36654 ms</span>
+                <span class="method-start">64274 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">ru.rgs.APITests.tests.search.SearchVehicleTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">37054 ms</span>
+                <span class="method-start">65636 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">37178 ms</span>
+                <span class="method-start">65856 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">searchVehicle</span>
-                <span class="method-start">37179 ms</span>
+                <span class="method-start">65857 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
